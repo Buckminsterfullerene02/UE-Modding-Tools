@@ -1,4 +1,4 @@
-# UE-Modding-Tools
+# UE Modding Tools
 A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
 
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
@@ -162,8 +162,15 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
 * [Create Empty Content Folder Hierarchy](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/EmptyContentHierarchyGenerator.bat) - Written by **Buckminsterfullerene**
     - Deletes every file inside of a specified directory but leaves all of the folders intact
     - Useful for creating a blank content folder hierarchy for a game
+* [Extract All Anim Assets]() - Written by **Buckminsterfullerene**
+    - A batch script of a couple nice UModel commands to extract all of the animation assets from a game
+    - Running the second command directly after the first is beneficial since all game packages are loaded into memory which saves a lot of time not having to do it twice
+    - To use, just change the variable paths
+* [Generate Blender Script To Convert GLTF to FBX]() - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
+    - C# program to generate a Blender script that can be used to mass convert GLTF files extracted from UModel to FBX files
+    - To use, just change the paths in the C# script
 
-# Reversing
+## Reversing
 Reversing tools that aren't necessarily to do with UE, but are commonly used to help with reversing games.
 * [Cheat Engine](https://www.cheatengine.org/) - Written by **Dark Byte**
     - A tool for modifying single player games
@@ -191,7 +198,7 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 * [010 Editor](https://www.sweetscape.com/010editor/) - Written by **Sweetscape Software**
     - A powerful hex tool for parsing files in 160+ formats and potentially unknown file types
 
-# Other
+## Other
 Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
@@ -202,8 +209,18 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
 * **[CU]** [Unreal Engine 4 Scripting System (UE4SS)](https://github.com/UE4SS/UE4SS/releases) - Written by **CheatingMuppet**
     - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
     - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/blob/master/Guides/FullInstallationGuide.md)
-* [Asset Registry Helper]() - Written by **Archengius**
+* [Asset Registry Helper](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/tree/main/Loose%20Files/Asset%20Registry%20Helper) - Written by **Archengius**
     - Allows merging contents of multiple asset registry files together and listing their contents
     - Useful when game uses asset registry to lookup content and you want to add some new content of that type
-* [Visual Studio 2017 Community Installer]() - Posted by **Narknon**
+* [Visual Studio 2017 Community Installer](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/vs_Community.exe) - Posted by **Narknon**
     - VS-2017 Community installer because microsoft apparently removed it from available downloads??
+
+# UE Modding Discord Servers
+A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR.
+
+## General
+* [UE Modding](https://discord.gg/zVvsE9mEEa) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
+* [Unreal Slackers](https://discord.gg/unreal-slackers) - The official Unreal Engine forum server.
+
+## Game Specific
+* []
