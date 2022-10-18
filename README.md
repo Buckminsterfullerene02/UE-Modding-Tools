@@ -28,7 +28,7 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - A parser for uasset, uexp and pak files
 * [UAssetAPI](https://github.com/atenfyr/UAssetAPI) - Written by **atenfyr**
     - A C# API for reading and writing UE4 .uasset files from 4.0 - 4.27+
-    - The author is active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) with any queries
+    - The author is active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) if you have any queries
 * **[CU]** [UAssetGUI](https://github.com/atenfyr/UAssetGUI) - Written by **atenfyr**
     - A GUI for UAssetAPI
 * **[CU]** [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
@@ -72,11 +72,42 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Just click a face, set up the variables it asks for in the 3D View, and click the button 
 * [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter) - Written by **NVIDIA**
     - The NVIDIA Texture Tools Exporter allows users to create highly compressed texture files directly from image sources
-* [3DSMax Bulk Export PSK/PSA to FBX](Loose Files\ActorXAnimConverter.ms) - Written by **Gildor**, adapted by **Aproydtix**
+* [3DSMax Bulk Export PSK/PSA to FBX](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/ActorXAnimConverter.ms) - Written by **Gildor**, adapted by **Aproydtix**
     - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH
     - Also will do deformation fixes to put an animation on a modified skeleton
 
+## SDK Generators & Dumpers
+Tools that generate SDKs and dump the game's code.
+* **[CU]** [UE4SS](https://github.com/UE4SS/UE4SS/releases) - Written by **CheatingMuppet**
+    - A UHT compatible header generator made by **Archengius** and an object dumper by **CheatingMuppet**
+    - It can also dump all C++ headers from a game, including Blueprint actors
+    - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/blob/master/Guides/FullInstallationGuide.md)
+    - The authors are active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) if you have any queries
+* **[CU]** [UE4 Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator) - Written by **Archengius**
+    - Allows the creation of a game mod project using the UHT header dumps from UE4SS
+    - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/wiki/Generating-UHT-compatible-headers)
+* [UE4 Project Generator GUI](https://github.com/bananaturtlesandwich/unreal-mod-tools/releases/tag/UE4ProjectGen-GUI) - Written by **Spuds**
+    - Organises the CMD arguments for you in a GUI and generates reuseable batch files
+* [UE Plugin Manifest Generator]() - Written by **HeartlessSeph**
+    - A simple script to make the plugin manifest for the project gen commandlet because <=4.17 games don't include them
+    - Usage is pretty simple, after fulling dumping your UE4 game just drag and drop the root extracted folder onto the program
+    - It'll spit out a file named "new.upluginmanifest" which can be renamed to whatever you want
+* [Add Object Initialiser To Actors in Project Files]() - Written by **dedede123**
+    - Adds object initializer to the constructor/static class of all Actor classes in your uproject files
+    - Modify to set the correct folder, and could be modified to apply to other types of classes as well if needed
+* [Unreal Mappings Dumper](https://github.com/OutTheShade/UnrealMappingsDumper) - Written by **OutTheShade**
+    - A dumper that generates mappings (.usmap) files for datamining Unreal Engine 5 games
+* [Unreal Dumper](https://github.com/guttir14/UnrealDumper-4.25) - Written by **guttir14**
+    - Generates the C++ headers for your game
+* [UE SDK Generator](https://github.com/polivilas/UnrealEngineSDKGenerator) - Written by **polivilas**
+    - Supports the generation of SDKs for any game on UE version 1-4
+* [UWP Dumper](https://github.com/Wunkolo/UWPDumper) - Written by **Wunkolo, tunip3 & LukeFZ**
+    - A DLL and Injector for dumping UWP applications at run-time to bypass encrypted file system protection
+* **[PW]** [Cheatgear](https://cheatgear.com/)
+    - Useful for dumping a lot of the uFunction names and writing script mods on top of it
+* [Unreal Finder Tool](https://github.com/CorrM/Unreal-Finder-Tool) - Written by **CorrM**
+    - The outdated - but open-source - version of Cheatgear
 
 ## .locres Editors
 Tools that deal with editing the UE4 .locres files, which are used for localisation.
