@@ -7,6 +7,8 @@ Some of these tools may be unmaintained and/or outdated, but are still useful fo
 
 The tag **[CU]** before a tool means that it is **C**ommonly **U**sed by multiple UE modding communities, so is highly recommended for personal use.
 
+The tag **[PW]** before a tool means that it is **P**aywalled.
+
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
 * [ue4pak](https://github.com/Vilsol/ue4pak) - Written by **Vilsol**
@@ -47,7 +49,33 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - Open-source software for exploring Unreal Engine games' files. From seeing the properties of an asset to listening to your favorite audio files, it has never been easier to navigate inside a game's assets
 
 ## Textures, Animations & Modelling
-Tools that deal with editing the textures, animations and models from UE4 games.
+Tools that deal with editing the textures, animations and models from UE4 games. 
+**Short PSA:** To get custom materials working in later UE4 versions, go to `ProjectSettings` then to `Packaging` and set `ShareMaterialShaderCode` to `False`, then cook them like you normally would.
+* [Blender3D Import PSK/PSA](https://github.com/Befzz/blender3d_import_psk_psa) - Written by **Befzz**
+    - Blender3D Import .psk & .psa addon imports meshes, skeletons and animations from .psk and .psa files to Blender3D
+* **[CU]** [Blender3D Import PSK/PSA FORK](https://github.com/matyalatte/blender3d_import_psk_psa) - Written by **matyalatte**
+    - Automatically handles scaling/fbx export so its a bit more user friendly for not messing things up
+* [UE4 DDS Tools](https://github.com/matyalatte/UE4-DDS-Tool) - Written by **matyalatte**
+    - Allows you to inject texture files directly into their original uassets without cooking for a large number of UE versions, and can do bulk operations via CLI
+* [Rokoko Studio](https://github.com/Rokoko/rokoko-studio-live-blender) - Written by **Rokoko**
+    - Rokoko Studio is a powerful and intuitive software for recording, visualizing and exporting motion capture
+    - This plugin lets you stream your animation data from Rokoko Studio directly into Blender
+    - More useful for modding however It also allows you to easily record and retarget animations, for easy animation swaps
+* **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
+    - Better FBX Importer & Exporter is for people who need to import FBX files into Blender and export FBX files to game engines
+* [Blender UEXP](https://github.com/AlexP0/Blender_UEXP) - Written by **AlexP0**
+    - Blender_UEXP creates a mesh in blender from a uexp to allow for edits, then writes modifications back into the uexp
+* [Dummy Materials Blender Plugin](https://bleedn.gumroad.com/l/dummymaterials) - Written by **bleedn**
+    - Secondary DL link [here](https://www.artstation.com/marketplace/p/Jr02g/blender-dummy-materials-add-on)
+    - REQUIRES BLENDER 3.2
+    - A plugin to automate making dummy materials
+    - Just click a face, set up the variables it asks for in the 3D View, and click the button 
+* [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter) - Written by **NVIDIA**
+    - The NVIDIA Texture Tools Exporter allows users to create highly compressed texture files directly from image sources
+* [3DSMax Bulk Export PSK/PSA to FBX](Loose Files\ActorXAnimConverter.ms) - Written by **Gildor**, adapted by **Aproydtix**
+    - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
+    - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH
+    - Also will do deformation fixes to put an animation on a modified skeleton
 
 
 ## .locres Editors
