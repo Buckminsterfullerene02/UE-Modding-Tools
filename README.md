@@ -1,5 +1,5 @@
 # UE-Modding-Tools
-A databank of every modding tool that has potential to be used across multiple UE games.
+A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
 
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
 
@@ -79,7 +79,7 @@ Tools that deal with editing the textures, animations and models from UE4 games.
 
 ## SDK Generators & Dumpers
 Tools that generate SDKs and dump the game's code.
-* **[CU]** [UE4SS](https://github.com/UE4SS/UE4SS/releases) - Written by **CheatingMuppet**
+* **[CU]** [Unreal Engine 4 Scripting System (UE4SS)](https://github.com/UE4SS/UE4SS/releases) - Written by **CheatingMuppet**
     - A UHT compatible header generator made by **Archengius** and an object dumper by **CheatingMuppet**
     - It can also dump all C++ headers from a game, including Blueprint actors
     - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/blob/master/Guides/FullInstallationGuide.md)
@@ -122,6 +122,8 @@ Tools that deal with editing the UE4 .locres files, which are used for localisat
 Tools that can load mods into the game.
 * **[CU]** [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
     - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
+* [DLL Plugin Loader](https://github.com/c0dycode/DLLPluginLoader) - Written by **c0dycode**
+    - Loads various other DLLs if an application/game tried to load a certain DLL which is not actually being used/required
 
 ## Unlockers
 Unlocks features that are usually disabled in shipping UE games.
@@ -153,10 +155,55 @@ Tools that deal with audio modding. You don't need any tools to mod the default 
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
-* [Backup UE Saves]() - Written by **Mythical**
+* [Backup UE Saves](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/SaveBackupUtility.bat) - Written by **Mythical**
     - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
-* [Auto-Disable uasset Files]() - Written by **Spuds**
+* [Auto-Disable uasset Files](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/DisableUassets.bat) - Written by **Spuds**
     - Deletes `.uexp` and `.ubulk` files and replaces `.uassets` with blank files of the same name recursively when a folder containing exported assets is dragged onto it
-* [Create Empty Content Folder Hierarchy]() - Written by **Buckminsterfullerene**
+* [Create Empty Content Folder Hierarchy](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/EmptyContentHierarchyGenerator.bat) - Written by **Buckminsterfullerene**
     - Deletes every file inside of a specified directory but leaves all of the folders intact
     - Useful for creating a blank content folder hierarchy for a game
+
+# Reversing
+Reversing tools that aren't necessarily to do with UE, but are commonly used to help with reversing games.
+* [Cheat Engine](https://www.cheatengine.org/) - Written by **Dark Byte**
+    - A tool for modifying single player games
+    - It allows you to scan for values and then change them
+* [x64dbg](https://x64dbg.com/) - Written by **mrexodia**
+    - A free and open-source x64/x32 debugger for windows
+    - For certain types of reversing like finding basic AOBs it is great because it is much faster than IDA (it doesn't do the same level of decompiling)
+* [x64dbg Swiss Army Knife](https://github.com/Nukem9/SwissArmyKnife) - Written by **Nukem9**
+    - Plugin for x64dbg that can generate AOBs for you, and will automatically wildcard call pointers and such
+* [AOB Generator](https://github.com/FransBouma/InjectableGenericCameraSystem/tree/master/Tools/AOBGen) - Written by **Frans 'Otis_Inf' Bouma**
+    - A small tool for easy AOB creating from copied x64 disassembly (Cheat Engine or x64dbg format)
+* [IDA Free](https://www.hex-rays.com/products/ida/support/download_freeware.shtml) - Written by **Hex-Rays**
+    - A free version of IDA Pro
+    - It is a bit limited, but it is still a great tool for reverse engineering programs
+* [Ghidra](https://ghidra-sre.org/) - Written by **National Security Agency**
+    - A software reverse engineering (SRE) framework
+    - It is a free and open-source tool that can be used to analyze compiled code on a variety of platforms including Windows, Linux, and macOS
+* [HxD](https://mh-nexus.de/en/hxd/) - Written by **mh-nexus**
+    - A freeware hex editor
+    - It can be used to view, edit, analyze, and process files of arbitrary size, including `.uexp` files
+* [Process Hacker](https://processhacker.sourceforge.io/) - Written by **Wj32**
+    - A free and open-source tool that helps you monitor system resources, debug software & looking at memory string for processes currently running
+* [Resource Hacker](http://www.angusj.com/resourcehacker/) - Written by **Angus Johnson**
+    - A freeware utility to view, modify, rename, add, delete and extract resources in 32bit Windows executables and resource files (.res)
+* [010 Editor](https://www.sweetscape.com/010editor/) - Written by **Sweetscape Software**
+    - A powerful hex tool for parsing files in 160+ formats and potentially unknown file types
+
+# Other
+Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
+* [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
+    - A simple tool that will grab the engine version of a UE4 game
+* [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
+    - A plugin for UE4.23 which allows for programming in C#
+* [Universal-ImGui-D3D11-Hook-WithResize](https://github.com/GHFear/Universal-ImGui-D3D11-Hook-WithResize) - Written by **GHFear**
+    - A Universal DirectX11 hook that supports resizing of the game window by hooking the ResizeBuffers
+* **[CU]** [Unreal Engine 4 Scripting System (UE4SS)](https://github.com/UE4SS/UE4SS/releases) - Written by **CheatingMuppet**
+    - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
+    - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/blob/master/Guides/FullInstallationGuide.md)
+* [Asset Registry Helper]() - Written by **Archengius**
+    - Allows merging contents of multiple asset registry files together and listing their contents
+    - Useful when game uses asset registry to lookup content and you want to add some new content of that type
+* [Visual Studio 2017 Community Installer]() - Posted by **Narknon**
+    - VS-2017 Community installer because microsoft apparently removed it from available downloads??
