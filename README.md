@@ -168,7 +168,7 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
     - A batch script of a couple nice UModel commands to extract all of the animation assets from a game
     - Running the second command directly after the first is beneficial since all game packages are loaded into memory which saves a lot of time not having to do it twice
     - To use, just change the variable paths
-* [Generate Blender Script To Convert GLTF to FBX](https://gist.github.com/Buckminsterfullerene02/6b49374b8a8da0d992e73a22c9e0d7dc) - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
+* [Generate Blender Script To Convert GLTF to FBX](https://gist.github.com/Buckminsterfullerene02/6b49374b8a8da0d992e73a22c9e0d7dc) - Written by **DmgVol**
     - C# program to generate a Blender script that can be used to mass convert GLTF files extracted from UModel to FBX files
     - To use, just change the paths in the C# script
 
@@ -228,7 +228,6 @@ Guides that are useful for modding UE games.
     - If you do BP modding and haven't watched this video for whatever reason, I highly recommend watching it
     - Complimentary article: [Blueprints vs C++](http://awforsythe.com/unreal/blueprints_vs_cpp/)
 * [Amazing YT Channel for BP Tutorials](https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ)
-
 
 ## Game-specific BUT Transferrable
 * [Modding Windows Store Games](https://docs.google.com/document/d/1MWazakhAcey7mQlwZEJA-8dDQ-a2KXd-AXa8c0J0Tlo/edit)
