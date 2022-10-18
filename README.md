@@ -122,6 +122,8 @@ Tools that deal with editing the UE4 .locres files, which are used for localisat
 Tools that can load mods into the game.
 * **[CU]** [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
     - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
+* [Reality](https://github.com/itskaitlyn03/Reality) - Written by **itskaitlyn03**
+    - A highly abstract and modular Unreal Engine mod loader for the 21st century, written in C#
 * [DLL Plugin Loader](https://github.com/c0dycode/DLLPluginLoader) - Written by **c0dycode**
     - Loads various other DLLs if an application/game tried to load a certain DLL which is not actually being used/required
 
@@ -219,7 +221,37 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
 Guides that are useful for modding UE games.
 
 ## General
-* [Setting up UE as git merge tool for BPs](https://gist.github.com/Panakotta00/c90d1017b89b4853e8b97d13501b2e62)
+* [Setting up UE as git merge tool for BPs](https://gist.github.com/Panakotta00/c90d1017b89b4853e8b97d13501b2e62) - Written by **Panakotta00**
+* [UE4 Networking for BP](https://cedric-neukirchen.net/Downloads/Compendium/UE4_Network_Compendium_by_Cedric_eXi_Neukirchen.pdf) - Written by **Cedric Neukirchen**
+    - Some very thorough documentation on UE4 Networking for both BP and C++
+* [Blueprints vs C++](https://www.youtube.com/watch?v=VMZftEVDuCE)
+    - If you do BP modding and haven't watched this video for whatever reason, I highly recommend watching it
+    - Complimentary article: [Blueprints vs C++](http://awforsythe.com/unreal/blueprints_vs_cpp/)
+* [Amazing YT Channel for BP Tutorials](https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ)
+
+
+## Game-specific BUT Transferrable
+* [Modding Windows Store Games](https://docs.google.com/document/d/1MWazakhAcey7mQlwZEJA-8dDQ-a2KXd-AXa8c0J0Tlo/edit)
+    - This guide to get started with modding Windows Store (Xbox Game Pass and similar) UE games versions was created for Deep Rock Galactic but is potentially useful for any other game within this category
+* [Satisfactory Blueprint Modding Documentation](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
+    - The Satisfactory Modding Documentation is much more useful than official UE4 documentation in some places, like in the C++ and Blueprint section
+* [Astroneer Modding Guide](https://docs.google.com/document/d/193p6thlTOWffF-JIeTGrLUHg9Um5i6gwMJaK4kzy9Ik/edit)
+    - The Astroneer Modder's Guide has some nice in-depth explanation of using the UnrealPak and UAssetGUI tools. If you ignore the Astroneer-specific parts, this is definitely relevant to most other UE4 games
+* [Hex Editing Materials with HxD](https://docs.google.com/document/d/1JFGoev79Pqvh1JYYua2Ngo3rLRIWu8BeTtrwPWdn6lM/edit#heading=h.ga0funqkacr2)
+    - Although this guide was created for Guilty Gear Strive, it features some absolutely brilliant explanations of using FModel and hex editing materials with HxD
+* [Ghostrunner Guides](https://github.com/Dmgvol/GR_Guides) - Written by **Dmgvol**
+    - A collection of modding guides for Ghostrunner but the same principles apply for all UE4 games
+    - Guides like texture and model swapping, hex, UAssetGUI/API, CustomModLoader examples and more
+* [Running UE Tools in Linux](https://mod.io/g/drg/r/drg-modding-tools-linux) - Written by **Keplyx**
+    - How to run various modding tools in Linux, e.g. UAssetGUI, UModel, UE4 (without building from source)
+    - This guide was made for DRG, however most of it is completely UE4 game-generic
+* [How to Blueprint Mod](https://mod.io/g/drg/r/how-to-blueprint-mod) - Written by **Buckminsterfullerene**
+    - Although this is made for Deep Rock Galactic, it is definitely still relevant for making BP mods for any other game
+    - You will have to tailor the blueprint loading method to whatever your game uses, or UML, or whatever, since DRG has a native system implemented by the developers
+    - It also features some nice tips for general UE4 use
+* [How to Audio Mod](https://mod.io/g/drg/r/drg-mods-a-comprehensive-guide-to-audio-modding) - Written by **Buckminsterfullerene**
+    - Although this is made for Deep Rock Galactic, it is definitely still relevant for making audio mods for any other game that uses the default UE audio system
+    - It also features some nice tips for general UE4 use
 
 # UE Modding Discord Servers
 A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. Feel free to nick this list of Discord servers for your own Discord.
