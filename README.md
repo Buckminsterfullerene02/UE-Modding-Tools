@@ -72,7 +72,7 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Just click a face, set up the variables it asks for in the 3D View, and click the button 
 * [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter) - Written by **NVIDIA**
     - The NVIDIA Texture Tools Exporter allows users to create highly compressed texture files directly from image sources
-* [3DSMax Bulk Export PSK/PSA to FBX](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/ActorXAnimConverter.ms) - Written by **Gildor**, adapted by **Aproydtix**
+* [3DSMax Bulk Export PSK/PSA to FBX](https://gist.github.com/Buckminsterfullerene02/12947999641c6a290f2cbbaf4e0ee313) - Written by **Gildor**, adapted by **Aproydtix**
     - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH
     - Also will do deformation fixes to put an animation on a modified skeleton
@@ -93,7 +93,7 @@ Tools that generate SDKs and dump the game's code.
     - A simple script to make the plugin manifest for the project gen commandlet because <=4.17 games don't include them
     - Usage is pretty simple, after fulling dumping your UE4 game just drag and drop the root extracted folder onto the program
     - It'll spit out a file named "new.upluginmanifest" which can be renamed to whatever you want
-* [Add Object Initialiser To Actors in Project Files](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/ObjectInitializerActorConstructorScript.ps1) - Written by **dedede123**
+* [Add Object Initialiser To Actors in Project Files](https://gist.github.com/Buckminsterfullerene02/90d1d02a6639f656e284bd799801241c) - Written by **dedede123**
     - Adds object initializer to the constructor/static class of all Actor classes in your uproject files
     - Modify to set the correct folder, and could be modified to apply to other types of classes as well if needed
 * [Unreal Mappings Dumper](https://github.com/OutTheShade/UnrealMappingsDumper) - Written by **OutTheShade**
@@ -155,18 +155,18 @@ Tools that deal with audio modding. You don't need any tools to mod the default 
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
-* [Backup UE Saves](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/SaveBackupUtility.bat) - Written by **Mythical**
+* [Backup UE Saves](https://gist.github.com/Buckminsterfullerene02/479a281cf3d8a854e91cf804bd7fb8cb) - Written by **Mythical**
     - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
-* [Auto-Disable uasset Files](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/DisableUassets.bat) - Written by **Spuds**
+* [Auto-Disable uasset Files](https://gist.github.com/Buckminsterfullerene02/aebbbc6cde0456a852197260656314c0) - Written by **Spuds**
     - Deletes `.uexp` and `.ubulk` files and replaces `.uassets` with blank files of the same name recursively when a folder containing exported assets is dragged onto it
-* [Create Empty Content Folder Hierarchy](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/EmptyContentHierarchyGenerator.bat) - Written by **Buckminsterfullerene**
+* [Create Empty Content Folder Hierarchy](https://gist.github.com/Buckminsterfullerene02/43ac2fe1c760b101de4b452dd711ce3f) - Written by **Buckminsterfullerene**
     - Deletes every file inside of a specified directory but leaves all of the folders intact
     - Useful for creating a blank content folder hierarchy for a game
-* [Extract All Anim Assets](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/UModelExtract.bat) - Written by **Buckminsterfullerene**
+* [Extract All Anim Assets](https://gist.github.com/Buckminsterfullerene02/789fb38a2f1ccd2ef55262a90be578d9) - Written by **Buckminsterfullerene**
     - A batch script of a couple nice UModel commands to extract all of the animation assets from a game
     - Running the second command directly after the first is beneficial since all game packages are loaded into memory which saves a lot of time not having to do it twice
     - To use, just change the variable paths
-* [Generate Blender Script To Convert GLTF to FBX](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/GenerateBPY.cs) - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
+* [Generate Blender Script To Convert GLTF to FBX](https://gist.github.com/Buckminsterfullerene02/6b49374b8a8da0d992e73a22c9e0d7dc) - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
     - C# program to generate a Blender script that can be used to mass convert GLTF files extracted from UModel to FBX files
     - To use, just change the paths in the C# script
 
@@ -214,6 +214,12 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Useful when game uses asset registry to lookup content and you want to add some new content of that type
 * [Visual Studio 2017 Community Installer](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/vs_Community.exe) - Posted by **Narknon**
     - VS-2017 Community installer because microsoft apparently removed it from available downloads??
+
+# Guides
+Guides that are useful for modding UE games.
+
+## General
+* [Setting up UE as git merge tool for BPs](https://gist.github.com/Panakotta00/c90d1017b89b4853e8b97d13501b2e62)
 
 # UE Modding Discord Servers
 A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. Feel free to nick this list of Discord servers for your own Discord.

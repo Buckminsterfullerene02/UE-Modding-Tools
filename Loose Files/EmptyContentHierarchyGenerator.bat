@@ -1,1 +1,0 @@
-DEL "path to files\*.*" /S /Q
