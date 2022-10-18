@@ -21,7 +21,7 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Rust port of U4Pak
 
 ## Asset Editors, Parsers & Explorers
-Tools that deal with editing and parsing the UE4 asset files, with formats including .uasset, .uexp, .ucas, .utoc, .umap etc. 
+Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
 * [CUE4Parse](https://github.com/FabianFG/CUE4Parse) - Maintained by the FModel developers
     - C# Parser and API for UE packages & assets
 * [JohnWickParse](https://github.com/SirWaddles/JohnWickParse) - Written by **SirWaddles, FabianFG, WorkingRobot & Amrsatrio**
@@ -89,11 +89,11 @@ Tools that generate SDKs and dump the game's code.
     - Full instructions on how to use it can be found [here](https://github.com/UE4SS/UE4SS/wiki/Generating-UHT-compatible-headers)
 * [UE4 Project Generator GUI](https://github.com/bananaturtlesandwich/unreal-mod-tools/releases/tag/UE4ProjectGen-GUI) - Written by **Spuds**
     - Organises the CMD arguments for you in a GUI and generates reuseable batch files
-* [UE Plugin Manifest Generator]() - Written by **HeartlessSeph**
+* [UE Plugin Manifest Generator](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/upluginTool.7z) - Written by **HeartlessSeph**
     - A simple script to make the plugin manifest for the project gen commandlet because <=4.17 games don't include them
     - Usage is pretty simple, after fulling dumping your UE4 game just drag and drop the root extracted folder onto the program
     - It'll spit out a file named "new.upluginmanifest" which can be renamed to whatever you want
-* [Add Object Initialiser To Actors in Project Files]() - Written by **dedede123**
+* [Add Object Initialiser To Actors in Project Files](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/ObjectInitializerActorConstructorScript.ps1) - Written by **dedede123**
     - Adds object initializer to the constructor/static class of all Actor classes in your uproject files
     - Modify to set the correct folder, and could be modified to apply to other types of classes as well if needed
 * [Unreal Mappings Dumper](https://github.com/OutTheShade/UnrealMappingsDumper) - Written by **OutTheShade**
@@ -114,7 +114,49 @@ Tools that deal with editing the UE4 .locres files, which are used for localisat
 * **[CU]** [UnrealLocres](https://github.com/akintos/UnrealLocres) - Written by **akintos**
     - UnrealLocres can read/write every locres version up to 3 (latest)
 * [Locres Editor](https://cdn.discordapp.com/attachments/775093920915914794/836699867920859207/unreal_locres_texttool.exe) - (Unknown author)
-    - A tool to change the game's .locres files that are used for localization
+    - A tool to change the game's `.locres` files that are used for localization
 * [UE4LocalizationsTool](https://github.com/amrshaheen61/UE4LocalizationsTool) - Written by **amr shaheen**
     - Simple tool to edit unreal engine 4 text files
 
+## Loaders
+Tools that can load mods into the game.
+* **[CU]** [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
+    - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
+
+## Unlockers
+Unlocks features that are usually disabled in shipping UE games.
+* **[CU]** [Universal UE Unlocker (UUU) v3.0](https://framedsc.github.io/GeneralGuides/universal_ue4_consoleunlocker.htm) - Written by **Frans 'Otis_Inf' Bouma**
+    - Re-enables the command line within a game if usually disabled
+    - [Full list](https://digilander.libero.it/ZioYuri78/) of available commands
+* **[PW]** [UUU v4.0](https://www.patreon.com/Otis_Inf) - Written by **Frans 'Otis_Inf' Bouma**
+    - Provides custom photo-mode mods and a bunch of other amazing cinematography tools for UE4 games
+* [UUU Dump Formatter](https://github.com/Mert-Y/UniversalUE4UnlockerDumpFormatter) - Written by **Mert-Y**
+    - Formats the dump from the UUU into a readable format
+* [Unreal Mod Unlocker](https://github.com/IllusorySoftware/UnrealModUnlocker-Public) - Written by **IllusorySoftware**
+    - Unlocks loading of 3rd party UE4 loose files for (a claimed) 75-90% of UE4 games
+
+## Audio
+Tools that deal with audio modding. You don't need any tools to mod the default UE audio system, if the game uses that. Sadly, many games use proprietary audio systems like FMOD and WWise, which require their own tools.
+* [BNK Editor](https://github.com/marieismywaifu/BNKEditor) - Written by **marieismywaifu**
+    - Allows direct replacing and saving of wems from the .bnk files of games that use Wwise for audio (located in the WwiseBanks folder)
+* [BNK Extractor](https://github.com/eXpl0it3r/bnkextr) - Written by **eXpl0it3r**
+    - Wwise *.BNK File Extractor extracts WEM files from the ever more popular Wwise BNK format
+* [Wwiser](https://github.com/bnnm/wwiser) - Written by **bnnm**
+    - Wwise .bnk parser to assist in ripping audio from games using the Wwise engine
+* [ww2ogg](https://github.com/hcs64/ww2ogg) - Written by **hcs64**
+    - Converts Wwise `RIFF`/`RIFX` Vorbit to standard `Ogg` Vorbis
+* [Audacity](https://www.audacityteam.org/) - Written by **Audacity Team**
+    - A very nice tool for opening, recording and editing audio files of many types
+    - It supports macros which allows for some automation too
+* [Foobar2000](https://www.foobar2000.org/) - Written by **Peter Pawlowski**
+    - An advanced freeware audio player for Windows
+
+## Automation
+Tools that can help to automate the modding pipeline (that haven't been covered already).
+* [Backup UE Saves]() - Written by **Mythical**
+    - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
+* [Auto-Disable uasset Files]() - Written by **Spuds**
+    - Deletes `.uexp` and `.ubulk` files and replaces `.uassets` with blank files of the same name recursively when a folder containing exported assets is dragged onto it
+* [Create Empty Content Folder Hierarchy]() - Written by **Buckminsterfullerene**
+    - Deletes every file inside of a specified directory but leaves all of the folders intact
+    - Useful for creating a blank content folder hierarchy for a game
