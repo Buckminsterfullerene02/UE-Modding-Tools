@@ -162,11 +162,11 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
 * [Create Empty Content Folder Hierarchy](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/EmptyContentHierarchyGenerator.bat) - Written by **Buckminsterfullerene**
     - Deletes every file inside of a specified directory but leaves all of the folders intact
     - Useful for creating a blank content folder hierarchy for a game
-* [Extract All Anim Assets]() - Written by **Buckminsterfullerene**
+* [Extract All Anim Assets](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/UModelExtract.bat) - Written by **Buckminsterfullerene**
     - A batch script of a couple nice UModel commands to extract all of the animation assets from a game
     - Running the second command directly after the first is beneficial since all game packages are loaded into memory which saves a lot of time not having to do it twice
     - To use, just change the variable paths
-* [Generate Blender Script To Convert GLTF to FBX]() - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
+* [Generate Blender Script To Convert GLTF to FBX](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/GenerateBPY.cs) - Written by **LongerWarrior**, edited by **Buckminsterfullerene**
     - C# program to generate a Blender script that can be used to mass convert GLTF files extracted from UModel to FBX files
     - To use, just change the paths in the C# script
 
@@ -216,11 +216,50 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - VS-2017 Community installer because microsoft apparently removed it from available downloads??
 
 # UE Modding Discord Servers
-A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR.
+A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. Feel free to nick this list of Discord servers for your own Discord.
 
 ## General
 * [UE Modding](https://discord.gg/zVvsE9mEEa) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
 * [Unreal Slackers](https://discord.gg/unreal-slackers) - The official Unreal Engine forum server.
+* [Flatscreen to VR Game Modding](https://discord.gg/ZFSCSDe) - The server that is dedicated to modding games from flatscreen to VR.
 
 ## Game Specific
-* []
+* [Astroneer Modding](https://discord.gg/bBqdVYxu4k)
+* [Bloodstained Mods](https://discord.gg/b9XBH4f)
+* [Days Gone Modding](https://discord.gg/udwqmH3zmw)
+* [Deep Rock Galactic Modding](https://discord.gg/3EVUQjz8N5)
+* [Dungeoneer's Hideout](https://discord.gg/HHPZb9pRNG)
+* [Grounded Modding](https://discord.gg/Rtfn5FE)
+* [Hydroneer](https://discord.gg/Jvwnn49YjU)
+* [Illusory](https://discord.gg/JVgD2w3Npj)
+* [Jedi: Fallen Order Modding](https://discord.gg/vdW326Z67h)
+* [Mod by Daylight](https://discord.gg/zHADmtvYEZ)
+* [Ark Modding Discord](https://discord.arkmodding.net/) (note that you have to own the game on Steam to join it)
+* [Borderlands 3 Modding](https://discord.gg/shadowevil)
+* [Conan Exiles Modding](https://discord.com/invite/AWBmXFZ)
+* [Mechwarrior 5 Modding](https://discord.com/invite/zRptMZD)
+* [The official Mech 5 Discord with modding channels](https://discord.gg/hcnbX5r)
+* [Mod the Dragon](https://discord.gg/z3BbjANWCz)
+* [Modder Base](https://discord.gg/aRCRzEEtTT)
+* [Satisfactory Modding](https://discord.gg/5mmF2uWR2u)
+* [State of Decay 2 Modding](https://discord.gg/ngamAnJ)
+* [Verg's Table Stable](https://discord.gg/HnyuAqvXEB)
+* [Dragon Quest Modding](https://discord.gg/KuHG8bnEUf)
+* [Project Wingman](https://discord.gg/xyw4zRtnVP)
+* [UE Anime Games' Modding](https://discord.gg/tgFrebr)
+* [Combined speedrunning and modding for Ghostrunner](https://discord.gg/eZRz3Q5)
+* [Official Blue Fire server with modding channels](https://discord.gg/q4ydWSG)
+* [Code Vein & Scarlet Nexus Modding](https://discord.gg/VvfvWn9)
+* [Orcs Must Die Modding Community](https://discord.gg/YrCaHw7Hza) (covers Unchained (UE3) Singleplayer client and OMD3 (UE4.26))
+* [Tales of Arise Mods](https://discord.gg/Se2XTnA)
+* [BravelyPath Modular](https://discord.gg/t43Kbrp)
+* [Trials of Mana Modding](https://discord.gg/MgDh4QW)
+* [Zedfest Modding](https://discord.gg/dGZnqjENZB)
+* [GFD Mods](https://discord.gg/XHVKA5xpu3)
+* [Crash Bandicoot 4 Workshop](https://discord.gg/k7xZHWFFQp)
+* [Spongebob BFBB Rehydrated Workshop](https://discord.gg/qWCtKfu)
+* [CyubeVR](https://discord.gg/cyubeVR)
+* [Evil Dead Modding](https://discord.gg/sjUez8dZF7)
+* [Stray Modding](https://discord.gg/v2e7SbsJTW)
+* [Warhammer UE Games Modding](https://discord.gg/pcUFFpD4QW)
+* [Foxhole Modding](https://discord.com/invite/QD4KjK5RTv)
