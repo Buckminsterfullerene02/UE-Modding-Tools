@@ -55,7 +55,7 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Blender3D Import .psk & .psa addon imports meshes, skeletons and animations from .psk and .psa files to Blender3D
 * **[CU]** [Blender3D Import PSK/PSA FORK](https://github.com/matyalatte/blender3d_import_psk_psa) - Written by **matyalatte**
     - Automatically handles scaling/fbx export so its a bit more user friendly for not messing things up
-* [UE4 DDS Tools](https://github.com/matyalatte/UE4-DDS-Tool) - Written by **matyalatte**
+* [UE4 DDS Tools](https://github.com/matyalatte/UE4-DDS-Tools) - Written by **matyalatte**
     - Allows you to inject texture files directly into their original uassets without cooking for a large number of UE versions, and can do bulk operations via CLI
 * [Rokoko Studio](https://github.com/Rokoko/rokoko-studio-live-blender) - Written by **Rokoko**
     - Rokoko Studio is a powerful and intuitive software for recording, visualizing and exporting motion capture
