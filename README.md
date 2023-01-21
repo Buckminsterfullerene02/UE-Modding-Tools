@@ -76,6 +76,9 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Just click a face, set up the variables it asks for in the 3D View, and click the button 
 * [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter) - Written by **NVIDIA**
     - The NVIDIA Texture Tools Exporter allows users to create highly compressed texture files directly from image sources
+* [Blender Bulk Export PSK/PSA to FBX](https://github.com/KaiserM21/HelperScripts/blob/main/psk_psa_batch_export.py) - Written by Zain#1873
+    - Uses UModel exported psk/psa
+    - Requires [this plugin](https://github.com/matyalatte/blender3d_import_psk_psa) to run
 * [3DSMax Bulk Export PSK/PSA to FBX](https://gist.github.com/Buckminsterfullerene02/12947999641c6a290f2cbbaf4e0ee313) - Written by **Gildor**, adapted by **Aproydtix**, further modified by **Buckminsterfullerene**
     - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH & Buckminsterfullerene
@@ -194,6 +197,8 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
     - Need to have the [these](https://gist.github.com/Buckminsterfullerene02/1588574607c8b551dd101e09ccc925ed) config settings in your project's `DefaultEngine.ini` file 
 * [Make Debug World](https://dev.epicgames.com/community/snippets/APr/unreal-engine-make-showcase-world-grid) - Written by **Buckminsterfullerene**
     - Once you have all static meshes/actors uncooked in-editor, you can use this editor utility script to load them all into a level in a neat way
+* [Batch Import FBX into UEE](https://github.com/KaiserM21/HelperScripts/blob/main/import_fbx.py) - Written by **Zain#1873**
+    - Allows you to batch import folders of FBX into the editor since the "import all" function with folder import is broken in many engine versions 
 
 ## Reversing
 Reversing tools that aren't necessarily to do with UE, but are commonly used to help with reversing games.
