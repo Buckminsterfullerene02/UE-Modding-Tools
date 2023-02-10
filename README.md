@@ -347,7 +347,7 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Hogwarts Legacy Modding](https://discord.gg/j8EHr266)
 
 # Game Specific Template Projects
-These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game.
+These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
 
 They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and some fork of the [Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator).
 
@@ -371,3 +371,12 @@ They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and s
 * [The King of Fighters XV](https://github.com/narknon/KOFXV-Project)
 * [Ashen](https://github.com/narknon/Ashen-Proj)
 * [Oak](https://github.com/narknon/OakGameProj)
+
+# Game Specific Modkits
+These modkits are fully reconstructed/decooked game assets that are placed into the editor on top of the game's template project. These modkits completely eliminate the need to manually dummy any game assets for blueprint mods.
+
+They are all generated using [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) and [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) as well as a few automation scripts such as UModel & zain's Blender mass psk/psa -> fbx exporter. 
+
+* [Deep Rock Galactic](https://drive.google.com/file/d/1LRNyJ7nmR4IWI54K9VONdjnnNSDEP-tw/view)
+* [Astro Colony](https://drive.google.com/file/d/1AazbzwbIWUcXGCp8T2k8M9dkCSKmNA3H/view)
+* [cyubeVR](https://drive.google.com/file/d/17hX0e-hQ8MFm3IoW3ljH00EYh2earCoX/view?usp=share_link)
