@@ -21,6 +21,12 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Rust port of U4Pak
 * **[CU]** [TocPatcher](https://github.com/kboykboy2/TocPatcher) - Written by **kboykboy**
     - Designed to modify .utoc files to allow mods to work for games using both `IoStore` and `Pak Signing`
+* [unpak](https://github.com/bananaturtlesandwich/unpak) - Written by **Spuds**
+    - A "no nonsense" unreal pak parser that doesn't force files to be extracted, only converts entries to bytes when requested and supports all pak versions
+* [repak](https://github.com/trumank/repak) - Written by **truman**
+    - A fork of the above unpak tool, with a few extra features
+    - Supports reading all pak versions with compression/encryption and writing all pak versions but without compression/encryption (yet)
+    - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
 
 ## Asset Editors, Parsers & Explorers
 Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
@@ -76,9 +82,9 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Just click a face, set up the variables it asks for in the 3D View, and click the button 
 * [NVIDIA Texture Tools Exporter](https://developer.nvidia.com/nvidia-texture-tools-exporter) - Written by **NVIDIA**
     - The NVIDIA Texture Tools Exporter allows users to create highly compressed texture files directly from image sources
-* [Blender Bulk Export PSK/PSA to FBX](https://github.com/KaiserM21/HelperScripts/blob/main/psk_psa_batch_export.py) - Written by Zain#1873
+* [Blender Bulk Export PSK/PSA to FBX](https://github.com/KaiserM21/HelperScripts/blob/main/psk_psa_batch_export.py) - Written by **Zain#1873**
     - Uses UModel exported psk/psa
-    - Requires [this plugin](https://github.com/matyalatte/blender3d_import_psk_psa) to run
+    - Requires [this plugin](https://github.com/Befzz/blender3d_import_psk_psa) to run
 * [3DSMax Bulk Export PSK/PSA to FBX](https://gist.github.com/Buckminsterfullerene02/12947999641c6a290f2cbbaf4e0ee313) - Written by **Gildor**, adapted by **Aproydtix**, further modified by **Buckminsterfullerene**
     - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH & Buckminsterfullerene
@@ -247,7 +253,9 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Allows merging contents of multiple asset registry files together and listing their contents
     - Useful when game uses asset registry to lookup content and you want to add some new content of that type
 * [Visual Studio 2017 Community Installer](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/vs_Community.exe) - Posted by **Narknon**
-    - VS-2017 Community installer because microsoft apparently removed it from available downloads??
+    - VS-2017 Community installer because microsoft apparently removed it from available downloads lol
+* [uesave](https://github.com/trumank/uesave-rs) - Written by **truman**
+    - save file editor/library for reading and writing Unreal Engine save files (commonly referred to as GVAS)
 
 # Guides
 Guides that are useful for modding UE games.
@@ -262,6 +270,8 @@ Guides that are useful for modding UE games.
 * [Amazing YT Channel for BP Tutorials](https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ)
 
 ## Game-specific BUT Transferrable
+* [How to Package .ucas files](https://github.com/narknon/CCFF7RUproj#to-pak-files-as-ucasutoc)
+    - While this guide is for Final Fantasy 7 Remake, it is still useful for modding a UE game that also uses .ucas files
 * [Modding Windows Store Games](https://docs.google.com/document/d/1MWazakhAcey7mQlwZEJA-8dDQ-a2KXd-AXa8c0J0Tlo/edit)
     - This guide to get started with modding Windows Store (Xbox Game Pass and similar) UE games versions was created for Deep Rock Galactic but is potentially useful for any other game within this category
 * [Satisfactory Blueprint Modding Documentation](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
