@@ -345,3 +345,29 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Ace Combat 7](https://discord.gg/get-home-be-home-stay-home-280590586321567745)
 * [Ghostwire Tokyo Modding](https://discord.gg/XpyRqe6p)
 * [Hogwarts Legacy Modding](https://discord.gg/j8EHr266)
+
+# Game Specific Template Projects
+These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game.
+
+They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and some fork of the [Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator).
+
+* [Deep Rock Galactic](https://github.com/DRG-Modding/FSD-Template)
+* [Hogwarts Legacy](https://github.com/narknon/PhoenixUProj)
+* [cyubeVR](https://github.com/cyubeVR-Modding/cyubeVR-Template)
+* [Astro Colony](https://github.com/AstroColony-Modding/AC-Template)
+* [Stray](https://github.com/Stray-Modding)
+* [Hydroneer](https://github.com/Buckminsterfullerene02/Hydroneer-Template)
+* [Crisis Core FF7 Reunion](https://github.com/narknon/CCFF7RUproj)
+* [One Piece Odyssey](https://github.com/narknon/OnePieceOdysseyModding)
+* [Nimbus](https://github.com/GreenTrafficLight/Nimbus-Template)
+* [End Game](https://github.com/narknon/EndGameProj)
+* [High On Life](https://github.com/narknon/HighProj)
+* [Entropy Centre](https://github.com/narknon/ProjKilo)
+* [Brewmaster](https://github.com/BrewmasterModding/BrewmasterMod)
+* [Harvestella](https://github.com/narknon/HarvestellaProject)
+* [Remnant](https://github.com/narknon/Remnant-Project)
+* [Scorn](https://github.com/narknon/ScornProject)
+* [Grounded](https://github.com/narknon/Grounded-uProject)
+* [The King of Fighters XV](https://github.com/narknon/KOFXV-Project)
+* [Ashen](https://github.com/narknon/Ashen-Proj)
+* [Oak](https://github.com/narknon/OakGameProj)
