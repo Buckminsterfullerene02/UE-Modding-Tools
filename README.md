@@ -332,3 +332,6 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Stray Modding](https://discord.gg/v2e7SbsJTW)
 * [Warhammer UE Games Modding](https://discord.gg/pcUFFpD4QW)
 * [Foxhole Modding](https://discord.com/invite/QD4KjK5RTv)
+* [Ace Combat 7](https://discord.gg/get-home-be-home-stay-home-280590586321567745)
+* [Ghostwire Tokyo Modding](https://discord.gg/XpyRqe6p)
+* [Hogwarts Legacy Modding](https://discord.gg/j8EHr266)
