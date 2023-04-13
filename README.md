@@ -1,9 +1,11 @@
 # UE Modding Tools
 A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
 
+If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the developer guide [here](https://unreal-modding-library.github.io/dev-guide/).
+
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
 
-Some of these tools may be unmaintained and/or outdated, but are still useful for those writing their own tools and may want to see how others implemented their tools.
+Some of these tools may be unmaintained and/or outdated, but are still useful for people writing their own tools and may want to see how others implemented their tools.
 
 The tag **[CU]** before a tool means that it is **C**ommonly **U**sed by multiple UE modding communities, so is highly recommended for personal use.
 
