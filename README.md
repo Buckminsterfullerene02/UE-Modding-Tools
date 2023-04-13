@@ -7,7 +7,7 @@ Some of these tools may be unmaintained and/or outdated, but are still useful fo
 
 The tag **[CU]** before a tool means that it is **C**ommonly **U**sed by multiple UE modding communities, so is highly recommended for personal use.
 
-The tag **[PW]** before a tool means that it is **P**aywalled.
+The tag **[PW]** before a tool means that it is **P**ay**w**alled.
 
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
@@ -122,6 +122,22 @@ Tools that generate SDKs and dump the game's code.
     - Useful for dumping a lot of the uFunction names and writing script mods on top of it
 * [Unreal Finder Tool](https://github.com/CorrM/Unreal-Finder-Tool) - Written by **CorrM**
     - The outdated - but open-source - version of Cheatgear
+
+## Editor Asset Generators
+Tools that generate assets for the Unreal Engine 4 Editor. Allows you to reconstruct the game's assets in the editor, in your own project. Saves a heap of time with manually dummying assets for blueprint modding. Example modkit projects can be found in the [Game Specific Modkits](https://github.com/Buckminsterfullerene02/UE-Modding-Tools#game-specific-modkits) section. 
+* [JsonAsAsset](https://github.com/Tectors/JsonAsAsset) - Written by **Tectors & GMatrixGames**
+    - Takes FModel's exportable JSON data from a cooked asset and converts it into an Unreal Engine asset inside of the editor
+    - Only supports Unreal Engine 5
+* [UnrealPskPSA](https://github.com/djhaled/UnrealPSKPSA) - Written by **halfuwu & bK**
+    - Directly imports the ActorX formatted files (`.psk`/`.pskx`/`.psa`) into Unreal Engine inside of the editor
+    - Only supports Unreal Engine 5
+* [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) - Written by **Archengius**
+    - Bulk converts JSON data from cooked assets into Unreal Engine assets inside of the editor
+    - Confirmed to support UE4.25-4.27
+* [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) - Written by **LongerWarrior**
+    - Bulk converts cooked assets into UEAssetToolkit-compatible JSON
+    - Confirmed to support UE4.25-4.27
+    - Also known as Cooked Asset Serializer (CAS)
 
 ## .locres Editors
 Tools that deal with editing the UE4 .locres files, which are used for localisation.
