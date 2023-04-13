@@ -70,7 +70,7 @@ Tools that deal with editing the textures, animations and models from UE4 games.
 * [Rokoko Studio](https://github.com/Rokoko/rokoko-studio-live-blender) - Written by **Rokoko**
     - Rokoko Studio is a powerful and intuitive software for recording, visualizing and exporting motion capture
     - This plugin lets you stream your animation data from Rokoko Studio directly into Blender
-    - More useful for modding however It also allows you to easily record and retarget animations, for easy animation swaps
+    - More useful for modding as it also allows you to easily record and retarget animations, for easy animation swaps
 * **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
     - Better FBX Importer & Exporter is for people who need to import FBX files into Blender and export FBX files to game engines
 * [Blender UEXP](https://github.com/AlexP0/Blender_UEXP) - Written by **AlexP0**
@@ -90,6 +90,11 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH & Buckminsterfullerene
     - Also will do deformation fixes to put an animation on a modified skeleton
     - Extra modifications include: automatically clearing the scene when new model imported, adds ability to mass export animations in sub folders for specific directory layouts to make mass export process much faster
+* [Unreal Shader Map Extractor](https://github.com/WistfulHopes/UEShaderMapExtractor) - Written by **Aeryn**
+    - Extracts and helps identify shaders from Unreal material shadermaps
+    - Custom [FModel build](https://github.com/WistfulHopes/FModel) used in conjunction with command line utilities
+    - Requires an FName dump of your game to identify shaders
+    - Currently only works with D3D11 games that use LZ4 compression; support for other shader and compression types is unimplemented
 
 ## SDK Generators & Dumpers
 Tools that generate SDKs and dump the game's code.
@@ -152,6 +157,8 @@ Tools that deal with editing the UE4 .locres files, which are used for localisat
 Tools that can load mods into the game.
 * **[CU]** [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
     - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
+* **[CU]** [UE4SS 2.5](https://github.com/UE4SS-RE/RE-UE4SS)
+    - Spawn blueprint mods automatically without editing/replacing game files
 * [Reality](https://github.com/itskaitlyn03/Reality) - Written by **itskaitlyn03**
     - A highly abstract and modular Unreal Engine mod loader for the 21st century, written in C#
 * [DLL Plugin Loader](https://github.com/c0dycode/DLLPluginLoader) - Written by **c0dycode**
@@ -184,6 +191,8 @@ Tools that deal with audio modding. You don't need any tools to mod the default 
     - It supports macros which allows for some automation too
 * [Foobar2000](https://www.foobar2000.org/) - Written by **Peter Pawlowski**
     - An advanced freeware audio player for Windows
+* [Export Utility Wwise](https://github.com/djhaled/ExportUtilityWwise) - Written by **bK**
+    - A C# console application for exporting audio from UE games that use Wwise, and converting them into `.wav` format
 
 ## Mapping
 Map dumping/generating/editing (that aren't already covered by asset editors).
@@ -193,10 +202,13 @@ Map dumping/generating/editing (that aren't already covered by asset editors).
 * [Yet another Quake Map Importer](https://github.com/Perpixel/UE4_QuakeImport) - Written by **Perpixel**
 * [Unreal Polygonal Map Generator](https://github.com/Jay2645/Unreal-Polygonal-Map-Gen) - Written by **Hay2645**
 * [Call of Duty to UE4](https://github.com/AgenteDog/CoDtoUE4) - Written by **AgenteDog**
-* **[PW]**[Hammeur](https://nte.itch.io/hammuer) - Written by **NT Entertainment**
+* **[PW]** [Hammeur](https://nte.itch.io/hammuer) - Written by **NT Entertainment**
     - A Source/idTech 2-4 map importer plugin for Unreal Engine 4 (and eventually 5)
 * [SuperGrid Starter Pack](https://www.unrealengine.com/marketplace/en-US/product/supergrid-starter-pack) - Written by **ZeOrb**
     - Level blockout tools, useful for some map modding
+* [BlenderUMap2](https://github.com/MinshuG/BlenderUmap2) - Written by **Amrsatrio & MinshuG**
+    - Imports `.umaps` into Blender from UE4/5 games
+    - Can also read `.replay` files from Fortnite and export actors from them
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
