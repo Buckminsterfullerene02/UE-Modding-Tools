@@ -1,7 +1,7 @@
 # UE Modding Tools
 A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
 
-If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the developer guide [here](https://unreal-modding-library.github.io/dev-guide/).
+If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the developer guide [here](https://buckminsterfullerene02.github.io/dev-guide/).
 
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
 
@@ -13,36 +13,49 @@ The tag **[PW]** before a tool means that it is **P**ay**w**alled.
 
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
-* [ue4pak](https://github.com/Vilsol/ue4pak) - Written by **Vilsol**
-    - Parses and extracts data from UE4 Pak files
 * **[CU]** [UnrealPak](http://fluffyquack.com/tools/unrealpak.rar) - Put together by **FluffyQuack**
     - UnrealPak version from 2016 that is seemingly compatible with any UE4 game, that creates compressed pak files which results in smaller filesizes and theoretically faster loading
 * **[CU]** [U4Pak](https://github.com/panzi/u4pak) - Written by **panzi**
     - U4Pak unpacks, packs, lists, checks and mounts UE4 .pak archives
+* [ue4pak](https://github.com/Vilsol/ue4pak) - Written by **Vilsol**
+    - Parses and extracts data from UE4 Pak files
 * [U4Pak - Rust](https://github.com/panzi/rust-u4pak) - Written by **panzi**
     - Rust port of U4Pak
-* **[CU]** [TocPatcher](https://github.com/kboykboy2/TocPatcher) - Written by **kboykboy**
+* [TocPatcher](https://github.com/kboykboy2/TocPatcher) - Written by **kboykboy**
     - Designed to modify .utoc files to allow mods to work for games using both `IoStore` and `Pak Signing`
 * [unpak](https://github.com/bananaturtlesandwich/unpak) - Written by **Spuds**
     - A "no nonsense" unreal pak parser that doesn't force files to be extracted, only converts entries to bytes when requested and supports all pak versions
 * [repak](https://github.com/trumank/repak) - Written by **truman**
     - A fork of the above unpak tool, with a few extra features
-    - Supports reading all pak versions with compression/encryption and writing all pak versions but without compression/encryption (yet)
+    - Supports reading all pak versions with compression/encryption and writing all pak versions
     - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
+* [ZenTools](https://github.com/Archengius/ZenTools/) - Written by **Archengius**
+    - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
 
 ## Asset Editors, Parsers & Explorers
 Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
-* [CUE4Parse](https://github.com/FabianFG/CUE4Parse) - Maintained by the FModel developers
-    - C# Parser and API for UE packages & assets
-* [JohnWickParse](https://github.com/SirWaddles/JohnWickParse) - Written by **SirWaddles, FabianFG, WorkingRobot & Amrsatrio**
-    - A parser for uasset, uexp and pak files
+* **[CU]** [UE Viewer (AKA UModel)](https://www.gildor.org/en/projects/umodel) - Written by **Gildor**
+    - UE Viewer (formerly known as UModel) is the standard tool for viewing and extracting UE4 game content, particularly models and textures
+* **[CU]** [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
+    - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
+* **[CU]** [FModel](https://github.com/iAmAsval/FModel/)
+    - Open-source software for exploring Unreal Engine games' files. From seeing the properties of an asset to listening to your favorite audio files, it has never been easier to navigate inside a game's assets
+* **[CU]** [CUE4Parse](https://github.com/FabianFG/CUE4Parse) - Maintained by the FModel developers
+    - C# Parser and API for UE packages & assets, used primarily by FModel
+* **[CU]** [UAssetGUI](https://github.com/atenfyr/UAssetGUI) - Written by **atenfyr**
+    - A GUI for UAssetAPI
 * [UAssetAPI](https://github.com/atenfyr/UAssetAPI) - Written by **atenfyr**
     - A C# API for reading and writing UE4 .uasset files from 4.0 - 4.27+
     - The author is active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) if you have any queries
-* **[CU]** [UAssetGUI](https://github.com/atenfyr/UAssetGUI) - Written by **atenfyr**
-    - A GUI for UAssetAPI
-* **[CU]** [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
-    - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
+* [KismetEditor view for UAssetGUI](https://github.com/trumank/UAssetGUI/tree/kismet-editor) - Written by **trumank**
+    - A graph view similar to blueprints but on the kismet instruction level
+    - Displays a limited set of instructions/parameters
+* [Kismet Analyzer](https://github.com/trumank/kismet-analyzer) - Written by **trumank**
+    - Tools for analyzing and manipulating kismet bytecode in cooked Unreal Engine assets
+* [stove](https://github.com/bananaturtlesandwich/stove) - Written by **spuds**
+    - A visual editor Unreal Engine cooked map files. Allows you to transplant actors from other maps, move actors, etc
+* [JohnWickParse](https://github.com/SirWaddles/JohnWickParse) - Written by **SirWaddles, FabianFG, WorkingRobot & Amrsatrio**
+    - A parser for uasset, uexp and pak files
 * [UAsset JSON Serializer](https://github.com/ithinkandicode/bloodstained-tools/tree/master/Serializer) - Written by **Kein**
     - Converts .uasset fies to JSON, allows you to edit the JSON, then converts edits back into the original uasset
 * [DUAM](https://github.com/DarthPointer/DAUM) - Written by **DarthPointer**
@@ -53,28 +66,24 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - UEcastoc is a WIP tool to unpack and edit IO store format files that are typically used in UE5 games
 * [UnrealPakViewer](https://github.com/jashking/UnrealPakViewer) - Written by **jashking, translated to English by Spuds**
     - UnrealPakViewer allows you too see a detailed summary of a pak file and export it to CSV or JSON, all within UE4
-* **[CU]** [UE Viewer (AKA UModel)](https://www.gildor.org/en/projects/umodel) - Written by **Gildor**
-    - UE Viewer (formerly known as UModel) is the standard tool for viewing and extracting UE4 game content, particularly models and textures
-* **[CU]** [FModel](https://github.com/iAmAsval/FModel/)
-    - Open-source software for exploring Unreal Engine games' files. From seeing the properties of an asset to listening to your favorite audio files, it has never been easier to navigate inside a game's assets
-* **[CU]** [stove](https://github.com/bananaturtlesandwich/stove) - Written by **spuds**
-    - A visual editor Unreal Engine cooked map files. Allows you to transplant actors from other maps, move actors, etc
+* [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121**
+    - Allows you to install texture packs created with UPK Explorer for UE3
+    - [TFC Installer](https://www.nexusmods.com/site/mods/588?)
+    - There is a dedicated category for discussion of this tool with the author in the [UE Modding Discord](https://discord.gg/zVvsE9mEEa)
 
 ## Textures, Animations & Modelling
 Tools that deal with editing the textures, animations and models from UE4 games. 
 **Short PSA:** To get custom materials working in later UE4 versions, go to `ProjectSettings` then to `Packaging` and set `ShareMaterialShaderCode` to `False`, then cook them like you normally would.
+* **[CU]** [Blender3D Import PSK/PSA FORK](https://github.com/matyalatte/blender3d_import_psk_psa) - Written by **matyalatte**
+    - Fork of the below tool, but automatically handles scaling/fbx export so its a bit more user friendly for not messing things up
 * [Blender3D Import PSK/PSA](https://github.com/Befzz/blender3d_import_psk_psa) - Written by **Befzz**
     - Blender3D Import .psk & .psa addon imports meshes, skeletons and animations from .psk and .psa files to Blender3D
-* **[CU]** [Blender3D Import PSK/PSA FORK](https://github.com/matyalatte/blender3d_import_psk_psa) - Written by **matyalatte**
-    - Automatically handles scaling/fbx export so its a bit more user friendly for not messing things up
 * [UE4 DDS Tools](https://github.com/matyalatte/UE4-DDS-Tools) - Written by **matyalatte**
     - Allows you to inject texture files directly into their original uassets without cooking for a large number of UE versions, and can do bulk operations via CLI
 * [Rokoko Studio](https://github.com/Rokoko/rokoko-studio-live-blender) - Written by **Rokoko**
     - Rokoko Studio is a powerful and intuitive software for recording, visualizing and exporting motion capture
     - This plugin lets you stream your animation data from Rokoko Studio directly into Blender
     - More useful for modding as it also allows you to easily record and retarget animations, for easy animation swaps
-* **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
-    - Better FBX Importer & Exporter is for people who need to import FBX files into Blender and export FBX files to game engines
 * [Blender UEXP](https://github.com/AlexP0/Blender_UEXP) - Written by **AlexP0**
     - Blender_UEXP creates a mesh in blender from a uexp to allow for edits, then writes modifications back into the uexp
 * [Dummy Materials Blender Plugin](https://bleedn.gumroad.com/l/dummymaterials) - Written by **bleedn**
@@ -87,6 +96,9 @@ Tools that deal with editing the textures, animations and models from UE4 games.
 * [Blender Bulk Export PSK/PSA to FBX](https://github.com/KaiserM21/HelperScripts/blob/main/psk_psa_batch_export.py) - Written by **Zain#1873**
     - Uses UModel exported psk/psa
     - Requires [this plugin](https://github.com/Befzz/blender3d_import_psk_psa) to run
+* [CUE4Parse Animation Assets Maxx Export Utility](https://github.com/Buckminsterfullerene02/CUE4Parse/tree/mass-export) - Written by **Buckminsterfullerene**
+    - A C# program that uses CUE4Parse to mass export animation assets from any UE game
+    - Detailed instructions on how to use it can be found in [this wiki](https://github.com/LongerWarrior/UEAssetToolkitGenerator/wiki/Generating-FBX#run-the-cue4parse-mass-actorx-exporter)
 * [3DSMax Bulk Export PSK/PSA to FBX](https://gist.github.com/Buckminsterfullerene02/12947999641c6a290f2cbbaf4e0ee313) - Written by **Gildor**, adapted by **Aproydtix**, further modified by **Buckminsterfullerene**
     - Version of ActorX 3DSMax script that can bulk convert PSK/PSA to FBX 
     - [Original Script](https://www.gildor.org/projects/unactorx) by Gildor, and modifications by Aproydtix from OpenKH & Buckminsterfullerene
@@ -97,6 +109,8 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Custom [FModel build](https://github.com/WistfulHopes/FModel) used in conjunction with command line utilities
     - Requires an FName dump of your game to identify shaders
     - Currently only works with D3D11 games that use LZ4 compression; support for other shader and compression types is unimplemented
+* **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
+    - Better FBX Importer & Exporter is for people who need to import FBX files into Blender and export FBX files to game engines
 
 ## SDK Generators & Dumpers
 Tools that generate SDKs and dump the game's code.
@@ -104,11 +118,13 @@ Tools that generate SDKs and dump the game's code.
     - A UHT compatible header generator made by **Archengius** and an object dumper by **[REDACTED]**
     - It can also dump all C++ headers from a game, including Blueprint actors
     - Full instructions on how to use it can be found [here](https://github.com/UE4SS-RE/RE-UE4SS/wiki/FullInstallationGuide)
-    - The authors are active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) if you have any queries
+    - The authors are active on the [UE4SS Discord](https://discord.gg/vwBdWYTBTf) if you have any queries
 * **[CU]** [UE4 Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator) - Written by **Archengius**
     - Allows the creation of a game mod project using the UHT header dumps from UE4SS
-    - Full instructions on how to use it can be found [here](https://github.com/UE4SS-RE/RE-UE4SS/wiki/Generating-UHT-compatible-headers)
-* [UE4 Project Generator GUI](https://github.com/bananaturtlesandwich/unreal-mod-tools/releases/tag/UE4ProjectGen-GUI) - Written by **Spuds**
+    - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/guides/generating-uht-compatible-headers.html)
+* **[PW]** [Cheatgear](https://cheatgear.com/)
+    - Useful for dumping a lot of the uFunction names and writing script mods on top of it
+* [UE4 Project Generator GUI](https://cdn.discordapp.com/attachments/1005879578419531947/1075109443445985462/UE4ProjectGen-GUI.exe) - Written by **Spuds**
     - Organises the CMD arguments for you in a GUI and generates reuseable batch files
 * [UE Plugin Manifest Generator](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/upluginTool.7z) - Written by **HeartlessSeph**
     - A simple script to make the plugin manifest for the project gen commandlet because <=4.17 games don't include them
@@ -125,8 +141,6 @@ Tools that generate SDKs and dump the game's code.
     - Supports the generation of SDKs for any game on UE version 1-4
 * [UWP Dumper](https://github.com/Wunkolo/UWPDumper) - Written by **Wunkolo, tunip3 & LukeFZ**
     - A DLL and Injector for dumping UWP applications at run-time to bypass encrypted file system protection
-* **[PW]** [Cheatgear](https://cheatgear.com/)
-    - Useful for dumping a lot of the uFunction names and writing script mods on top of it
 * [Unreal Finder Tool](https://github.com/CorrM/Unreal-Finder-Tool) - Written by **CorrM**
     - The outdated - but open-source - version of Cheatgear
 
@@ -140,6 +154,7 @@ Tools that generate assets for the Unreal Engine 4 Editor. Allows you to reconst
     - Only supports Unreal Engine 5
 * [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) - Written by **Archengius**
     - Bulk converts JSON data from cooked assets into Unreal Engine assets inside of the editor
+    - AssetDumper can only be used as a plugin mod for games built modularly
     - Confirmed to support UE4.25-4.27
 * [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) - Written by **LongerWarrior**
     - Bulk converts cooked assets into UEAssetToolkit-compatible JSON
@@ -157,10 +172,12 @@ Tools that deal with editing the UE4 .locres files, which are used for localisat
 
 ## Loaders
 Tools that can load mods into the game.
-* **[CU]** [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
-    - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
-* **[CU]** [UE4SS 2.5](https://github.com/UE4SS-RE/RE-UE4SS)
+* **[CU]** [UE4SS Mod Loader](https://github.com/UE4SS-RE/RE-UE4SS)
     - Spawn blueprint mods automatically without editing/replacing game files
+    - Support for mods created previously with UML
+* [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
+    - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
+    - Mostly depreciated now with the release of UE4SS' Mod Loader
 * [Reality](https://github.com/itskaitlyn03/Reality) - Written by **itskaitlyn03**
     - A highly abstract and modular Unreal Engine mod loader for the 21st century, written in C#
 * [DLL Plugin Loader](https://github.com/c0dycode/DLLPluginLoader) - Written by **c0dycode**
@@ -200,12 +217,12 @@ Tools that deal with audio modding. You don't need any tools to mod the default 
 Map dumping/generating/editing (that aren't already covered by asset editors).
 * **[CU]** [UE4SS 2.0](https://github.com/UE4SS-RE/RE-UE4SS) - Written by **Narknon**
     - Map dumper/generator within Blender OR the UE editor (if you have static meshes recreated in the project)
+* **[PW]** [Hammeur](https://nte.itch.io/hammuer) - Written by **NT Entertainment**
+    - A Source/idTech 2-4 map importer plugin for Unreal Engine 4 (and eventually 5)
 * [UE4 Quake Map Importer](https://github.com/GoomiiV2/UE4-Quake-Map-Importer) - Written by **GoomiiV2**
 * [Yet another Quake Map Importer](https://github.com/Perpixel/UE4_QuakeImport) - Written by **Perpixel**
 * [Unreal Polygonal Map Generator](https://github.com/Jay2645/Unreal-Polygonal-Map-Gen) - Written by **Hay2645**
 * [Call of Duty to UE4](https://github.com/AgenteDog/CoDtoUE4) - Written by **AgenteDog**
-* **[PW]** [Hammeur](https://nte.itch.io/hammuer) - Written by **NT Entertainment**
-    - A Source/idTech 2-4 map importer plugin for Unreal Engine 4 (and eventually 5)
 * [SuperGrid Starter Pack](https://www.unrealengine.com/marketplace/en-US/product/supergrid-starter-pack) - Written by **ZeOrb**
     - Level blockout tools, useful for some map modding
 * [BlenderUMap2](https://github.com/MinshuG/BlenderUmap2) - Written by **Amrsatrio & MinshuG**
@@ -238,6 +255,11 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
 
 ## Reversing
 Reversing tools that aren't necessarily to do with UE, but are commonly used to help with reversing games.
+* [pattensleuth](https://github.com/trumank/patternsleuth) - Written by **trumank**
+    - A tool for finding AoBs/patterns against a collection of Unreal Engine games
+    - Can show a summary of all patterns against all games or disassemble each step of a pattern resolution chain to debug failed patterns
+* [AOB Generator](https://github.com/FransBouma/InjectableGenericCameraSystem/tree/master/Tools/AOBGen) - Written by **Frans 'Otis_Inf' Bouma**
+    - A small tool for easy AOB creating from copied x64 disassembly (Cheat Engine or x64dbg format)
 * [Cheat Engine](https://www.cheatengine.org/) - Written by **Dark Byte**
     - A tool for modifying single player games
     - It allows you to scan for values and then change them
@@ -246,8 +268,6 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
     - For certain types of reversing like finding basic AOBs it is great because it is much faster than IDA (it doesn't do the same level of decompiling)
 * [x64dbg Swiss Army Knife](https://github.com/Nukem9/SwissArmyKnife) - Written by **Nukem9**
     - Plugin for x64dbg that can generate AOBs for you, and will automatically wildcard call pointers and such
-* [AOB Generator](https://github.com/FransBouma/InjectableGenericCameraSystem/tree/master/Tools/AOBGen) - Written by **Frans 'Otis_Inf' Bouma**
-    - A small tool for easy AOB creating from copied x64 disassembly (Cheat Engine or x64dbg format)
 * [IDA Free](https://www.hex-rays.com/products/ida/support/download_freeware.shtml) - Written by **Hex-Rays**
     - A free version of IDA Pro
     - It is a bit limited, but it is still a great tool for reverse engineering programs
@@ -266,19 +286,22 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 * [Cutter](https://cutter.re/) - Written by **Rizin**
     - Free and open source RE platform
     - Decompiler, graph view, debugger, linear disassmbler, emulator, python scripting engine, plugins, binary patching, etc.
+* [ImHex](https://github.com/WerWolv/ImHex) - Written by **WerWolv**
+    - A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 
 ## Other
 Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
+* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS/releases) - Written by **[REDACTED] & Narknon**
+    - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
+    - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/installation-guide.html)
+    - UE4SS includes a live view debugger, meaning that you can watch/log values of every loaded asset in the game, in real-time making it very useful for blueprint modding
+    - The authors are active on the [UE4SS Discord](https://discord.gg/vwBdWYTBTf) if you have any queries
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
 * [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
     - A plugin for UE4.23 which allows for programming in C#
 * [Universal-ImGui-D3D11-Hook-WithResize](https://github.com/GHFear/Universal-ImGui-D3D11-Hook-WithResize) - Written by **GHFear**
     - A Universal DirectX11 hook that supports resizing of the game window by hooking the ResizeBuffers
-* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS/releases) - Written by **[REDACTED] & Narknon**
-    - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
-    - Full instructions on how to use it can be found [here](https://github.com/UE4SS-RE/RE-UE4SS/wiki/FullInstallationGuide)
-    - UE4SS 2.0 now includes a live view debugger, meaning that you can watch/log values of every loaded asset in the game, in real-time - VERY useful for blueprint modding
 * [Asset Registry Helper](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/tree/main/Loose%20Files/Asset%20Registry%20Helper) - Written by **Archengius**
     - Allows merging contents of multiple asset registry files together and listing their contents
     - Useful when game uses asset registry to lookup content and you want to add some new content of that type
@@ -375,6 +398,12 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Ace Combat 7](https://discord.gg/get-home-be-home-stay-home-280590586321567745)
 * [Ghostwire Tokyo Modding](https://discord.gg/XpyRqe6p)
 * [Hogwarts Legacy Modding](https://discord.gg/j8EHr266)
+* [Ready Or Not Modding](https://discord.gg/hYkQ5hpmvr)
+* [Remnant II Modding](https://discord.gg/jX5qd2RefK)
+* [Chivalry 2 Modding](https://discord.gg/chiv2unchained)
+* [Amid Evil Modding](https://discord.gg/aK4eS65n9c)
+* [Lies of P Modding](https://discord.gg/hvcZZf2Ph7)
+* [FNAF Security Breach Modding](https://discord.gg/6B8REQVU9v)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
@@ -401,12 +430,15 @@ They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and s
 * [The King of Fighters XV](https://github.com/narknon/KOFXV-Project)
 * [Ashen](https://github.com/narknon/Ashen-Proj)
 * [Oak](https://github.com/narknon/OakGameProj)
+* [Octo 2](https://github.com/narknon/Octo2-uProj)
+* [Remnant II](https://github.com/narknon/Rem2Proj)
+* [SW Game](https://github.com/narknon/SwGameProj)
 
 # Game Specific Modkits
 These modkits are fully reconstructed/decooked game assets that are placed into the editor on top of the game's template project. These modkits completely eliminate the need to manually dummy any game assets for blueprint mods.
 
-They are all generated using [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) and [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) as well as a few automation scripts such as UModel & zain's Blender mass psk/psa -> fbx exporter. 
+They are all generated using [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) and [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) as well as a few automation scripts such as the CUE4Parse anim export script & zain's Blender mass psk/psa -> fbx exporter. 
 
-* [Deep Rock Galactic](https://drive.google.com/file/d/1LRNyJ7nmR4IWI54K9VONdjnnNSDEP-tw/view)
+* [Deep Rock Galactic](https://drive.google.com/file/d/1Su_0bdH_WUAt3bHMeEn1EkltHFG1otO6/view?usp=drive_link)
 * [Astro Colony](https://drive.google.com/file/d/1AazbzwbIWUcXGCp8T2k8M9dkCSKmNA3H/view)
 * [cyubeVR](https://drive.google.com/file/d/17hX0e-hQ8MFm3IoW3ljH00EYh2earCoX/view?usp=share_link)
