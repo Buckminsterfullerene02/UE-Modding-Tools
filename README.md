@@ -108,22 +108,27 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Extracts and helps identify shaders from Unreal material shadermaps
     - Custom [FModel build](https://github.com/WistfulHopes/FModel) used in conjunction with command line utilities
     - Requires an FName dump of your game to identify shaders
-    - Currently only works with D3D11 games that use LZ4 compression; support for other shader and compression types is unimplemented
+    - Supports DX11/DX12 and all forms of compression, doesn't support IO Store games of version 5.0+
+* [Better Blender GLTF Importer](https://cdn.discordapp.com/attachments/1018594783800852540/1174440075032002714/io_scene_gltf2_ue4.zip?ex=65baa80d&is=65a8330d&hm=3086253f6562d84fb5ef9dad6d35b1398f7d0272df68f74c9dbd582b80d3a280&)
+    - A version of the GLTF importer for Blender that preserves bone orientation
+    - This is important for skeletal mesh modding, and allows bypassing PSK altogether
 * **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
     - Better FBX Importer & Exporter is for people who need to import FBX files into Blender and export FBX files to game engines
 
 ## SDK Generators & Dumpers
 Tools that generate SDKs and dump the game's code.
-* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS) - Written by **[REDACTED] & Narknon**
-    - A UHT compatible header generator made by **Archengius** and an object dumper by **[REDACTED]**
+* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS) - Written by multiple contributors
+    - A UHT compatible header generator made by **Archengius** and an object dumper
     - It can also dump all C++ headers from a game, including Blueprint actors
     - Full instructions on how to use it can be found [here](https://github.com/UE4SS-RE/RE-UE4SS/wiki/FullInstallationGuide)
-    - The authors are active on the [UE4SS Discord](https://discord.gg/vwBdWYTBTf) if you have any queries
+    - The authors are active on the [UE4SS Discord](https://discord.gg/MFvUysppTS) if you have any queries
 * **[CU]** [UE4 Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator) - Written by **Archengius**
     - Allows the creation of a game mod project using the UHT header dumps from UE4SS
     - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/guides/generating-uht-compatible-headers.html)
 * **[PW]** [Cheatgear](https://cheatgear.com/)
     - Useful for dumping a lot of the uFunction names and writing script mods on top of it
+* [Dumper-7](https://github.com/Encryqed/Dumper-7) - Written by **Fischsalat & Encryqed**
+    - SDK Generator for all Unreal Engine games. Supported versions are all of UE4 and UE5
 * [UE4 Project Generator GUI](https://cdn.discordapp.com/attachments/1005879578419531947/1075109443445985462/UE4ProjectGen-GUI.exe) - Written by **Spuds**
     - Organises the CMD arguments for you in a GUI and generates reuseable batch files
 * [UE Plugin Manifest Generator](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/upluginTool.7z) - Written by **HeartlessSeph**
@@ -145,7 +150,7 @@ Tools that generate SDKs and dump the game's code.
     - The outdated - but open-source - version of Cheatgear
 
 ## Editor Asset Generators
-Tools that generate assets for the Unreal Engine 4 Editor. Allows you to reconstruct the game's assets in the editor, in your own project. Saves a heap of time with manually dummying assets for blueprint modding. Example modkit projects can be found in the [Game Specific Modkits](https://github.com/Buckminsterfullerene02/UE-Modding-Tools#game-specific-modkits) section. 
+Tools that generate assets for the Unreal Engine Editor. Allows you to reconstruct the game's assets in the editor, in your own project. Saves a heap of time with manually dummying assets for blueprint modding. Example modkit projects can be found in the [Game Specific Modkits](https://github.com/Buckminsterfullerene02/UE-Modding-Tools#game-specific-modkits) section. 
 * [JsonAsAsset](https://github.com/Tectors/JsonAsAsset) - Written by **Tectors & GMatrixGames**
     - Takes FModel's exportable JSON data from a cooked asset and converts it into an Unreal Engine asset inside of the editor
     - Only supports Unreal Engine 5
@@ -291,11 +296,15 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 
 ## Other
 Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
-* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS/releases) - Written by **[REDACTED] & Narknon**
+* **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS/releases) - Written by multiple contributors
     - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
     - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/installation-guide.html)
     - UE4SS includes a live view debugger, meaning that you can watch/log values of every loaded asset in the game, in real-time making it very useful for blueprint modding
-    - The authors are active on the [UE4SS Discord](https://discord.gg/vwBdWYTBTf) if you have any queries
+    - The authors are active on the [UE4SS Discord](https://discord.gg/MFvUysppTS) if you have any queries
+* **[CU]** [Unreal Engine Virtual Reality](https://github.com/praydog/UEVR) - Written by **praydog**
+    - Universal VR Mod for Unreal Engine 4/5
+* **[CU]** [uesave](https://github.com/trumank/uesave-rs) - Written by **truman**
+    - A save file editor/library for reading and writing Unreal Engine save files (commonly referred to as GVAS)
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
 * [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
@@ -307,8 +316,8 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Useful when game uses asset registry to lookup content and you want to add some new content of that type
 * [Visual Studio 2017 Community Installer](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/vs_Community.exe) - Posted by **Narknon**
     - VS-2017 Community installer because microsoft apparently removed it from available downloads lol
-* [uesave](https://github.com/trumank/uesave-rs) - Written by **truman**
-    - save file editor/library for reading and writing Unreal Engine save files (commonly referred to as GVAS)
+* [Orbital Market](https://orbital-market.com/search)
+    - A way to browse Epic marketplace and sort by popularity/reviews and use filters properly
 
 # Guides
 Guides that are useful for modding UE games.
@@ -377,7 +386,7 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [State of Decay 2 Modding](https://discord.gg/ngamAnJ)
 * [Verg's Table Stable](https://discord.gg/HnyuAqvXEB)
 * [Dragon Quest Modding](https://discord.gg/KuHG8bnEUf)
-* [Project Wingman](https://discord.gg/xyw4zRtnVP)
+* [Project Wingman](https://discord.gg/projectwingman)
 * [UE Anime Games' Modding](https://discord.gg/tgFrebr)
 * [Combined speedrunning and modding for Ghostrunner](https://discord.gg/eZRz3Q5)
 * [Official Blue Fire server with modding channels](https://discord.gg/q4ydWSG)
@@ -404,6 +413,10 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Amid Evil Modding](https://discord.gg/aK4eS65n9c)
 * [Lies of P Modding](https://discord.gg/hvcZZf2Ph7)
 * [FNAF Security Breach Modding](https://discord.gg/6B8REQVU9v)
+* [Moolah Modding](https://discord.gg/ATDJBehwEc) (Payday 3)
+* [Side 7 Modding](https://discord.gg/MdBKbmPxq3) (Dedicated servers for Gundam Evolution)
+* [Escape the Backrooms Modding](https://discord.gg/kpkdpCdY7Y)
+* [Palworld Modding](https://discord.gg/qHTZNcvYsv)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
@@ -439,6 +452,6 @@ These modkits are fully reconstructed/decooked game assets that are placed into 
 
 They are all generated using [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator) and [UEAssetToolkit](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes) as well as a few automation scripts such as the CUE4Parse anim export script & zain's Blender mass psk/psa -> fbx exporter. 
 
-* [Deep Rock Galactic](https://drive.google.com/file/d/1Su_0bdH_WUAt3bHMeEn1EkltHFG1otO6/view?usp=drive_link)
+* [Deep Rock Galactic](https://github.com/DRG-Modding/Community-Modkit)
 * [Astro Colony](https://drive.google.com/file/d/1AazbzwbIWUcXGCp8T2k8M9dkCSKmNA3H/view)
 * [cyubeVR](https://drive.google.com/file/d/17hX0e-hQ8MFm3IoW3ljH00EYh2earCoX/view?usp=share_link)
