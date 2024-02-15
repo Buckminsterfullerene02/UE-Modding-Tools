@@ -1,7 +1,7 @@
 # UE Modding Tools
 A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
 
-If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the developer guide [here](https://buckminsterfullerene02.github.io/dev-guide/).
+If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the [developer guide](https://buckminsterfullerene02.github.io/dev-guide/).
 
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
 
@@ -31,6 +31,12 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
 * [ZenTools](https://github.com/Archengius/ZenTools/) - Written by **Archengius**
     - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
+    - The extracted files can then be opened with any asset editor and repacked back into the `IoStore` container using UnrealPak
+    - Only supports 5.1 and 5.2
+* [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
+    - A fork of the above ZenTools but only supports 4.25 - 4.27 (all UE4 IoStore versions)
+* [UEcastoc](https://github.com/gitMenv/UEcastoc) - Written by **gitMenv**
+    - UEcastoc is a WIP tool to unpack and pack IoStore files
 
 ## Asset Editors, Parsers & Explorers
 Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
@@ -62,8 +68,6 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - CLI program with a lot of flexibility for editing uasset files
 * [UAssetConverter](https://github.com/approved/UnrealUAssetConverter) - Written by **approved**
     - An API to read, create, and modify .uasset and .uexp files
-* [UEcastoc](https://github.com/gitMenv/UEcastoc) - Written by **gitMenv**
-    - UEcastoc is a WIP tool to unpack and edit IO store format files that are typically used in UE5 games
 * [UnrealPakViewer](https://github.com/jashking/UnrealPakViewer) - Written by **jashking, translated to English by Spuds**
     - UnrealPakViewer allows you too see a detailed summary of a pak file and export it to CSV or JSON, all within UE4
 * [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121**
@@ -305,6 +309,10 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Universal VR Mod for Unreal Engine 4/5
 * **[CU]** [uesave](https://github.com/trumank/uesave-rs) - Written by **truman**
     - A save file editor/library for reading and writing Unreal Engine save files (commonly referred to as GVAS)
+* [gvas](https://github.com/localcc/gvas) - Written by **scottanderson & localcc**
+    - Rust library that allows parsing of gvas save files
+* [UeSaveGame](https://github.com/CrystalFerrai/UeSaveGame) - Written by **CrystalFerrai**
+    - A .NET library for reading and writing Unreal Engine 4 save files
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
 * [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
@@ -331,13 +339,23 @@ Guides that are useful for modding UE games.
     - Complimentary article: [Blueprints vs C++](http://awforsythe.com/unreal/blueprints_vs_cpp/)
 * [Amazing YT Channel for BP Tutorials](https://www.youtube.com/channel/UCOVfF7PfLbRdVEm0hONTrNQ)
 
-## Game-specific BUT Transferrable
+## Game Specific Modding Documentation Websites
+Many popular modding communities for various games have their own websites for documenting and centralising modding information. In many cases, information can be shared between other games, due to maybe using the same tools, engine version or the game uses similar systems. Usually, games will keep their modding resources exclusively within their own Discord communities, however this lacks the benefit of having their docs indexed and searchable by search engines. 
+
+* [Moolah Modding](https://moolah.dev/docs) (Payday 3)
+* [Palworld](https://pwmodding.wiki/)
+* [Hogwarts Legacy](https://modding.wiki/en/hogwartslegacy)
+    - Contains many useful mod examples using the UE4SS Lua API
+* [Satisfactory](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
+    - The Satisfactory Modding Documentation is much more useful than official UE documentation in some places, like in the C++ and Blueprint section
+
+## Game Specific BUT Transferrable
+These are loose files/sites.
+
 * [How to Package .ucas files](https://github.com/narknon/CCFF7RUproj#to-pak-files-as-ucasutoc)
     - While this guide is for Final Fantasy 7 Remake, it is still useful for modding a UE game that also uses .ucas files
 * [Modding Windows Store Games](https://docs.google.com/document/d/1MWazakhAcey7mQlwZEJA-8dDQ-a2KXd-AXa8c0J0Tlo/edit)
     - This guide to get started with modding Windows Store (Xbox Game Pass and similar) UE games versions was created for Deep Rock Galactic but is potentially useful for any other game within this category
-* [Satisfactory Blueprint Modding Documentation](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
-    - The Satisfactory Modding Documentation is much more useful than official UE4 documentation in some places, like in the C++ and Blueprint section
 * [Astroneer Modding Guide](https://docs.google.com/document/d/193p6thlTOWffF-JIeTGrLUHg9Um5i6gwMJaK4kzy9Ik/edit)
     - The Astroneer Modder's Guide has some nice in-depth explanation of using the UnrealPak and UAssetGUI tools. If you ignore the Astroneer-specific parts, this is definitely relevant to most other UE4 games
 * [Hex Editing Materials with HxD](https://docs.google.com/document/d/1JFGoev79Pqvh1JYYua2Ngo3rLRIWu8BeTtrwPWdn6lM/edit#heading=h.ga0funqkacr2)
@@ -417,11 +435,12 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Side 7 Modding](https://discord.gg/MdBKbmPxq3) (Dedicated servers for Gundam Evolution)
 * [Escape the Backrooms Modding](https://discord.gg/kpkdpCdY7Y)
 * [Palworld Modding](https://discord.gg/qHTZNcvYsv)
+* [Bioshock Modding](https://discord.gg/8xDc6DRag8)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
 
-They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and some fork of the [Game Project Generator](https://github.com/Archengius/UE4GameProjectGenerator).
+They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and the [Game Project Generator](https://github.com/Buckminsterfullerene02/UE4GameProjectGenerator).
 
 * [Deep Rock Galactic](https://github.com/DRG-Modding/FSD-Template)
 * [Hogwarts Legacy](https://github.com/narknon/PhoenixUProj)
@@ -446,6 +465,7 @@ They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and s
 * [Octo 2](https://github.com/narknon/Octo2-uProj)
 * [Remnant II](https://github.com/narknon/Rem2Proj)
 * [SW Game](https://github.com/narknon/SwGameProj)
+* [Palworld](https://github.com/localcc/PalworldModdingKit)
 
 # Game Specific Modkits
 These modkits are fully reconstructed/decooked game assets that are placed into the editor on top of the game's template project. These modkits completely eliminate the need to manually dummy any game assets for blueprint mods.
