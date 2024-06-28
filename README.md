@@ -1,7 +1,7 @@
 # UE Modding Tools
-A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/zVvsE9mEEa) - please join if you want discuss use of these tools!
+A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) - please join if you want discuss use of these tools or just general UE modding!
 
-If you are an UE game developer, and want to know how these tools can be used to mod your games, please see the [developer guide](https://buckminsterfullerene02.github.io/dev-guide/).
+If you are an UE game developer, and want to know how some of these tools are used to mod your games, please see the [developer guide](https://buckminsterfullerene02.github.io/dev-guide/).
 
 Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
 
@@ -14,21 +14,19 @@ The tag **[PW]** before a tool means that it is **P**ay**w**alled.
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
 * **[CU]** [UnrealPak](http://fluffyquack.com/tools/unrealpak.rar) - Put together by **FluffyQuack**
-    - UnrealPak version from 2016 that is seemingly compatible with any UE4 game, that creates compressed pak files which results in smaller filesizes and theoretically faster loading
-* **[CU]** [U4Pak](https://github.com/panzi/u4pak) - Written by **panzi**
-    - U4Pak unpacks, packs, lists, checks and mounts UE4 .pak archives
-* [ue4pak](https://github.com/Vilsol/ue4pak) - Written by **Vilsol**
-    - Parses and extracts data from UE4 Pak files
-* [U4Pak - Rust](https://github.com/panzi/rust-u4pak) - Written by **panzi**
-    - Rust port of U4Pak
-* [TocPatcher](https://github.com/kboykboy2/TocPatcher) - Written by **kboykboy**
-    - Designed to modify .utoc files to allow mods to work for games using both `IoStore` and `Pak Signing`
-* [unpak](https://github.com/bananaturtlesandwich/unpak) - Written by **Spuds**
-    - A "no nonsense" unreal pak parser that doesn't force files to be extracted, only converts entries to bytes when requested and supports all pak versions
-* [repak](https://github.com/trumank/repak) - Written by **truman**
-    - A fork of the above unpak tool, with a few extra features
+    - UnrealPak version from 2016 that is seemingly compatible with any UE4 game
+* **[CU]** [QuickBMS](https://aluigi.altervista.org/quickbms.htm) - Written by **Luigi Auriemma**
+    - Allows for fast unpaking of many types of files including `.pak` files (but does not work for `IoStore` container files (`.ucas`/`.utoc`))
+    - [Download link](https://aluigi.altervista.org/bms/unreal_tournament_4.bms) for the UE `.bms` script
+* **[CU]** [repak](https://github.com/trumank/repak) - Written by **truman**
+    - A fork of the below unpak tool, with a few extra features
     - Supports reading all pak versions with compression/encryption and writing all pak versions
     - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
+* [unpak](https://github.com/bananaturtlesandwich/unpak) - Written by **Spuds**
+    - A "no nonsense" unreal pak parser that doesn't force files to be extracted, only converts entries to bytes when requested and supports all pak versions
+* [repak wrappers](https://github.com/Mythical-Github/repak_wrappers) - Put together by **Mythical**
+    - Windows wrapper scripts for repak
+    - Easier for newer modders to use than repak's CLI requirement
 * [ZenTools](https://github.com/Archengius/ZenTools/) - Written by **Archengius**
     - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
     - The extracted files can then be opened with any asset editor and repacked back into the `IoStore` container using UnrealPak
@@ -36,30 +34,51 @@ Tools that deal with packing and unpacking the UE4 archive files.
 * [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
     - A fork of the above ZenTools but only supports 4.25 - 4.27 (all UE4 IoStore versions)
 * [UEcastoc](https://github.com/gitMenv/UEcastoc) - Written by **gitMenv**
-    - UEcastoc is a WIP tool to unpack and pack IoStore files
+    - UEcastoc is a WIP tool to unpack and pack `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
+* [UnrealUnZen](https://github.com/rm-NoobInCoding/UnrealUnZen) - Written by **NoobInCoding**
+    - UnrealUnZen is a WIP tool to unpack and pack `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
+* [TocPatcher](https://github.com/kboykboy2/TocPatcher) - Written by **kboykboy**
+    - Designed to modify .utoc files to allow mods to work for games using both `IoStore` and `Pak Signing`
+* [U4Pak](https://github.com/panzi/u4pak) - Written by **panzi**
+    - U4Pak unpacks, packs, lists, checks and mounts UE4 .pak archives
+* [ue4pak](https://github.com/Vilsol/ue4pak) - Written by **Vilsol**
+    - Parses and extracts data from UE4 Pak files
+* [U4Pak - Rust](https://github.com/panzi/rust-u4pak) - Written by **panzi**
+    - Rust port of U4Pak
 
 ## Asset Editors, Parsers & Explorers
 Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
 * **[CU]** [UE Viewer (AKA UModel)](https://www.gildor.org/en/projects/umodel) - Written by **Gildor**
     - UE Viewer (formerly known as UModel) is the standard tool for viewing and extracting UE4 game content, particularly models and textures
-* **[CU]** [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
-    - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
 * **[CU]** [FModel](https://github.com/iAmAsval/FModel/)
     - Open-source software for exploring Unreal Engine games' files. From seeing the properties of an asset to listening to your favorite audio files, it has never been easier to navigate inside a game's assets
 * **[CU]** [CUE4Parse](https://github.com/FabianFG/CUE4Parse) - Maintained by the FModel developers
     - C# Parser and API for UE packages & assets, used primarily by FModel
 * **[CU]** [UAssetGUI](https://github.com/atenfyr/UAssetGUI) - Written by **atenfyr**
     - A GUI for UAssetAPI
-* [UAssetAPI](https://github.com/atenfyr/UAssetAPI) - Written by **atenfyr**
+* **[CU]** [UAssetAPI](https://github.com/atenfyr/UAssetAPI) - Written by **atenfyr**
     - A C# API for reading and writing UE4 .uasset files from 4.0 - 4.27+
-    - The author is active on the [UE Modding Discord](https://discord.gg/zVvsE9mEEa) if you have any queries
+    - The author is active on the [UE Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) if you have any queries
+* [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
+    - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
 * [KismetEditor view for UAssetGUI](https://github.com/trumank/UAssetGUI/tree/kismet-editor) - Written by **trumank**
     - A graph view similar to blueprints but on the kismet instruction level
     - Displays a limited set of instructions/parameters
 * [Kismet Analyzer](https://github.com/trumank/kismet-analyzer) - Written by **trumank**
     - Tools for analyzing and manipulating kismet bytecode in cooked Unreal Engine assets
 * [stove](https://github.com/bananaturtlesandwich/stove) - Written by **spuds**
-    - A visual editor Unreal Engine cooked map files. Allows you to transplant actors from other maps, move actors, etc
+    - A visual editor Unreal Engine cooked map files
+    - Allows you to transplant actors from other maps, move actors, etc
+* [spaghetti](https://github.com/bananaturtlesandwich/spaghetti) - Written by **spuds**
+    - A function hooker for cooked Unreal Engine blueprints
+* [unreal_asset](https://github.com/AstroTechies/unrealmodding/tree/main/unreal_asset) - Written by **localcc, kronsti219 & spuds**
+    - A rust port of UAssetAPI 
+* [UnrealPakViewer](https://github.com/jashking/UnrealPakViewer) - Written by **jashking, translated to English by Spuds**
+    - UnrealPakViewer allows you too see a detailed summary of a pak file and export it to CSV or JSON, all within UE4
+* [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121 & FCH823**
+    - Allows you to install texture packs created with UPK Explorer for UE3
+    - [TFC Installer](https://www.nexusmods.com/site/mods/588?)
+    - There is a dedicated category for discussion of this tool with the author in the [UE Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934)
 * [JohnWickParse](https://github.com/SirWaddles/JohnWickParse) - Written by **SirWaddles, FabianFG, WorkingRobot & Amrsatrio**
     - A parser for uasset, uexp and pak files
 * [UAsset JSON Serializer](https://github.com/ithinkandicode/bloodstained-tools/tree/master/Serializer) - Written by **Kein**
@@ -68,12 +87,6 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - CLI program with a lot of flexibility for editing uasset files
 * [UAssetConverter](https://github.com/approved/UnrealUAssetConverter) - Written by **approved**
     - An API to read, create, and modify .uasset and .uexp files
-* [UnrealPakViewer](https://github.com/jashking/UnrealPakViewer) - Written by **jashking, translated to English by Spuds**
-    - UnrealPakViewer allows you too see a detailed summary of a pak file and export it to CSV or JSON, all within UE4
-* [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121**
-    - Allows you to install texture packs created with UPK Explorer for UE3
-    - [TFC Installer](https://www.nexusmods.com/site/mods/588?)
-    - There is a dedicated category for discussion of this tool with the author in the [UE Modding Discord](https://discord.gg/zVvsE9mEEa)
 
 ## Textures, Animations & Modelling
 Tools that deal with editing the textures, animations and models from UE4 games. 
@@ -81,7 +94,10 @@ Tools that deal with editing the textures, animations and models from UE4 games.
 * **[CU]** [Blender3D Import PSK/PSA FORK](https://github.com/matyalatte/blender3d_import_psk_psa) - Written by **matyalatte**
     - Fork of the below tool, but automatically handles scaling/fbx export so its a bit more user friendly for not messing things up
 * [Blender3D Import PSK/PSA](https://github.com/Befzz/blender3d_import_psk_psa) - Written by **Befzz**
-    - Blender3D Import .psk & .psa addon imports meshes, skeletons and animations from .psk and .psa files to Blender3D
+    - Blender3D Import `.psk` & `.psa` addon imports meshes, skeletons and animations from `.psk` and `.psa` files to Blender3D
+* [Blender 4.0 Import/Export PSK/PSA Plugin](https://github.com/DarklightGames/io_scene_psk_psa) - Written by **Colin Basnett**
+    - Actively maintained Blender 4.0 plugin (with support for older versions too) for importing and exporting `.psk` and `.psa` files
+    - Not to be confused with the above tools that are much older but do roughly the same things
 * [UE4 DDS Tools](https://github.com/matyalatte/UE4-DDS-Tools) - Written by **matyalatte**
     - Allows you to inject texture files directly into their original uassets without cooking for a large number of UE versions, and can do bulk operations via CLI
 * [Rokoko Studio](https://github.com/Rokoko/rokoko-studio-live-blender) - Written by **Rokoko**
@@ -113,7 +129,7 @@ Tools that deal with editing the textures, animations and models from UE4 games.
     - Custom [FModel build](https://github.com/WistfulHopes/FModel) used in conjunction with command line utilities
     - Requires an FName dump of your game to identify shaders
     - Supports DX11/DX12 and all forms of compression, doesn't support IO Store games of version 5.0+
-* [Better Blender GLTF Importer](https://cdn.discordapp.com/attachments/1018594783800852540/1174440075032002714/io_scene_gltf2_ue4.zip?ex=65baa80d&is=65a8330d&hm=3086253f6562d84fb5ef9dad6d35b1398f7d0272df68f74c9dbd582b80d3a280&)
+* [Better Blender GLTF Importer](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/io_scene_gltf2_ue4.zip)
     - A version of the GLTF importer for Blender that preserves bone orientation
     - This is important for skeletal mesh modding, and allows bypassing PSK altogether
 * **[PW]** [Better Blender FBX Importer/Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)
@@ -133,7 +149,7 @@ Tools that generate SDKs and dump the game's code.
     - Useful for dumping a lot of the uFunction names and writing script mods on top of it
 * [Dumper-7](https://github.com/Encryqed/Dumper-7) - Written by **Fischsalat & Encryqed**
     - SDK Generator for all Unreal Engine games. Supported versions are all of UE4 and UE5
-* [UE4 Project Generator GUI](https://cdn.discordapp.com/attachments/1005879578419531947/1075109443445985462/UE4ProjectGen-GUI.exe) - Written by **Spuds**
+* [UE4 Project Generator GUI](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/UE4ProjectGen-GUI.exe) - Written by **spuds**
     - Organises the CMD arguments for you in a GUI and generates reuseable batch files
 * [UE Plugin Manifest Generator](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/upluginTool.7z) - Written by **HeartlessSeph**
     - A simple script to make the plugin manifest for the project gen commandlet because <=4.17 games don't include them
@@ -173,8 +189,8 @@ Tools that generate assets for the Unreal Engine Editor. Allows you to reconstru
 ## .locres Editors
 Tools that deal with editing the UE4 .locres files, which are used for localisation.
 * **[CU]** [UnrealLocres](https://github.com/akintos/UnrealLocres) - Written by **akintos**
-    - UnrealLocres can read/write every locres version up to 3 (latest)
-* [Locres Editor](https://cdn.discordapp.com/attachments/775093920915914794/836699867920859207/unreal_locres_texttool.exe) - (Unknown author)
+    - UnrealLocres can read/write every locres version
+* [Locres Editor](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/unreal_locres_texttool.exe) - (Unknown author)
     - A tool to change the game's `.locres` files that are used for localization
 * [UE4LocalizationsTool](https://github.com/amrshaheen61/UE4LocalizationsTool) - Written by **amr shaheen**
     - Simple tool to edit unreal engine 4 text files
@@ -240,6 +256,8 @@ Map dumping/generating/editing (that aren't already covered by asset editors).
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
+* [UnrealAutoMod](https://github.com/Mythical-Github/UnrealAutoMod) - Written by **Mythical**
+    - Automatic mod creator and tester tool for `.pak`, `.utoc`, `.ucas`, or loose file mods
 * [Backup UE Saves](https://gist.github.com/Buckminsterfullerene02/479a281cf3d8a854e91cf804bd7fb8cb) - Written by **Mythical**
     - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
 * [Auto-Disable uasset Files](https://gist.github.com/Buckminsterfullerene02/aebbbc6cde0456a852197260656314c0) - Written by **Spuds**
@@ -301,7 +319,7 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 ## Other
 Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
 * **[CU]** [Unreal Engine 4/5 Scripting System (UE4SS)](https://github.com/UE4SS-RE/RE-UE4SS/releases) - Written by multiple contributors
-    - Exposes UE4 reflection to Lua and allows you to write Lua to create mods for UE4 games
+    - Exposes UE reflection to Lua and allows you to write Lua to create mods for UE games
     - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/installation-guide.html)
     - UE4SS includes a live view debugger, meaning that you can watch/log values of every loaded asset in the game, in real-time making it very useful for blueprint modding
     - The authors are active on the [UE4SS Discord](https://discord.gg/MFvUysppTS) if you have any queries
@@ -328,9 +346,16 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - A way to browse Epic marketplace and sort by popularity/reviews and use filters properly
 
 # Guides
-Guides that are useful for modding UE games.
+Guides that are useful for modding UE games. There is also a guides forum channel in the [Unreal Engine Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) where you can find more guides/modding tips or share your own.
 
 ## General
+* **[CU]** [Modding UE5 Games](https://www.abbiedoobie.com/2023/10/13/modding-robocop-rogue-city-and-other-ue-5-games/) - Written by **Abbie Doobie**
+    - A guide on how to mod UE5 games
+    - Primarily working with IO Store and chunks
+    - Lots of pictures, so it should be easy to follow along
+    - [Backup Link (with PDF version)](https://www.nexusmods.com/robocoproguecity/mods/3)
+* [UE4 Modding Guide](https://bananaturtlesandwich.github.io/UE4-Modding-Guide/) - Written by **Spuds**
+    - A general guide for Unreal Engine 4 game modding
 * [Setting up UE as git merge tool for BPs](https://gist.github.com/Panakotta00/c90d1017b89b4853e8b97d13501b2e62) - Written by **Panakotta00**
 * [UE4 Networking for BP](https://cedric-neukirchen.net/Downloads/Compendium/UE4_Network_Compendium_by_Cedric_eXi_Neukirchen.pdf) - Written by **Cedric Neukirchen**
     - Some very thorough documentation on UE4 Networking for both BP and C++
@@ -348,6 +373,7 @@ Many popular modding communities for various games have their own websites for d
     - Contains many useful mod examples using the UE4SS Lua API
 * [Satisfactory](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
     - The Satisfactory Modding Documentation is much more useful than official UE documentation in some places, like in the C++ and Blueprint section
+* [Spyro Reignited](https://franklygd.github.io/Spyro-Reignited-Trilogy-Asset-Replacement/)
 
 ## Game Specific BUT Transferrable
 These are loose files/sites.
@@ -368,7 +394,7 @@ These are loose files/sites.
     - This guide was made for DRG, however most of it is completely UE4 game-generic
 * [How to Blueprint Mod](https://mod.io/g/drg/r/how-to-blueprint-mod) - Written by **Buckminsterfullerene**
     - Although this is made for Deep Rock Galactic, it is definitely still relevant for making BP mods for any other game
-    - You will have to tailor the blueprint loading method to whatever your game uses, or UML, or whatever, since DRG has a native system implemented by the developers
+    - You will have to tailor the blueprint loading method to whatever your game uses or UE4SS, since DRG has a native system implemented by the developers
     - It also features some nice tips for general UE4 use
 * [How to Audio Mod](https://mod.io/g/drg/r/drg-mods-a-comprehensive-guide-to-audio-modding) - Written by **Buckminsterfullerene**
     - Although this is made for Deep Rock Galactic, it is definitely still relevant for making audio mods for any other game that uses the default UE audio system
@@ -378,21 +404,21 @@ These are loose files/sites.
 A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. Feel free to nick this list of Discord servers for your own Discord.
 
 ## General
-* [UE Modding](https://discord.gg/zVvsE9mEEa) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
-* [Unreal Slackers](https://discord.gg/unreal-slackers) - The official Unreal Engine forum server.
+* [UE Modding](https://discord.gg/unreal-engine-modding-876613187204685934) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
+* [Unreal Source](https://discord.gg/unrealsource) - The official Unreal Engine forum server.
 * [Flatscreen to VR Game Modding](https://discord.gg/ZFSCSDe) - The server that is dedicated to modding games from flatscreen to VR.
 
 ## Game Specific
 * [Astroneer Modding](https://discord.gg/bBqdVYxu4k)
 * [Bloodstained Mods](https://discord.gg/b9XBH4f)
-* [Days Gone Modding](https://discord.gg/udwqmH3zmw)
-* [Deep Rock Galactic Modding](https://discord.gg/3EVUQjz8N5)
+* [Days Gone Modding](https://discord.gg/days-gone-modding-844382493427499048)
+* [Deep Rock Galactic Modding](https://discord.gg/HDCh5fwnwP)
 * [Dungeoneer's Hideout](https://discord.gg/HHPZb9pRNG)
 * [Grounded Modding](https://discord.gg/Rtfn5FE)
-* [Hydroneer](https://discord.gg/Jvwnn49YjU)
-* [Illusory](https://discord.gg/JVgD2w3Npj)
-* [Jedi: Fallen Order Modding](https://discord.gg/vdW326Z67h)
-* [Mod by Daylight](https://discord.gg/zHADmtvYEZ)
+* [Hydroneer](https://discord.gg/hydroneer)
+* [Illusory](https://discord.com/invite/7nDfDjvZzc)
+* [Jedi: Fallen Order Modding](https://discord.com/invite/star-wars-jedi-modding-565192606145970177)
+* [Mod by Daylight](https://discord.com/invite/mod-by-daylight-797070950507872256)
 * [Ark Modding Discord](https://discord.arkmodding.net/) (note that you have to own the game on Steam to join it)
 * [Borderlands 3 Modding](https://discord.gg/shadowevil)
 * [Conan Exiles Modding](https://discord.com/invite/AWBmXFZ)
@@ -404,7 +430,7 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [State of Decay 2 Modding](https://discord.gg/ngamAnJ)
 * [Verg's Table Stable](https://discord.gg/HnyuAqvXEB)
 * [Dragon Quest Modding](https://discord.gg/KuHG8bnEUf)
-* [Project Wingman](https://discord.gg/projectwingman)
+* [Project Wingman](https://discord.gg/3D76e6WqXr)
 * [UE Anime Games' Modding](https://discord.gg/tgFrebr)
 * [Combined speedrunning and modding for Ghostrunner](https://discord.gg/eZRz3Q5)
 * [Official Blue Fire server with modding channels](https://discord.gg/q4ydWSG)
@@ -423,12 +449,12 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Warhammer UE Games Modding](https://discord.gg/pcUFFpD4QW)
 * [Foxhole Modding](https://discord.com/invite/QD4KjK5RTv)
 * [Ace Combat 7](https://discord.gg/get-home-be-home-stay-home-280590586321567745)
-* [Ghostwire Tokyo Modding](https://discord.gg/XpyRqe6p)
-* [Hogwarts Legacy Modding](https://discord.gg/j8EHr266)
+* [Ghostwire Tokyo Modding](https://discord.gg/BKpx2bw7C4)
+* [Hogwarts Legacy Modding](https://discord.gg/xguMKc2xMe)
 * [Ready Or Not Modding](https://discord.gg/hYkQ5hpmvr)
-* [Remnant II Modding](https://discord.gg/jX5qd2RefK)
+* [Remnant Games Modding](https://discord.gg/jX5qd2RefK)
 * [Chivalry 2 Modding](https://discord.gg/chiv2unchained)
-* [Amid Evil Modding](https://discord.gg/aK4eS65n9c)
+* [Amid Evil Modding](https://discord.gg/Nxp8m4bgBA)
 * [Lies of P Modding](https://discord.gg/hvcZZf2Ph7)
 * [FNAF Security Breach Modding](https://discord.gg/6B8REQVU9v)
 * [Moolah Modding](https://discord.gg/ATDJBehwEc) (Payday 3)
@@ -436,6 +462,11 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Escape the Backrooms Modding](https://discord.gg/kpkdpCdY7Y)
 * [Palworld Modding](https://discord.gg/qHTZNcvYsv)
 * [Bioshock Modding](https://discord.gg/8xDc6DRag8)
+* [Into the Radius](https://discord.gg/NWgNFhQq)
+* [Pseudoregalia](https://discord.gg/DqrHMrxWwf)
+* [Life is Strange Modding](https://discord.gg/RBzmXmuy)
+* [Absolver Academy](https://discord.gg/jUe34UTh)
+* [Abiotic Factor Modding](https://discord.gg/Tz2YHA79rX)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
