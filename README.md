@@ -1,15 +1,20 @@
 # UE Modding Tools
 A databank of every modding tool that has potential to be used across multiple UE games. Many tools were submitted by the lovely members of the [Unreal Engine Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) - please join if you want discuss use of these tools or just general UE modding!
 
-If you are an UE game developer, and want to know how some of these tools are used to mod your games, please see the [developer guide](https://buckminsterfullerene02.github.io/dev-guide/).
+Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a pull request.
 
-Any category is not ordered by any means, and any tool that is not listed here, but should be, please submit a PR.
+> [!NOTE]
+> The tag **[CU]** before a tool means that it is **C**ommonly **U**sed by multiple UE modding communities, so is highly recommended for personal use. <br>
+> The tag **[PW]** before a tool means that it is **P**ay**w**alled.
 
-Some of these tools may be unmaintained and/or outdated, but are still useful for people writing their own tools and may want to see how others implemented their tools.
+> [!TIP]
+> If you want to know how to use some of these tools, make sure you check out the [guides section](https://github.com/Buckminsterfullerene02/UE-Modding-Tools?tab=readme-ov-file#guides)!
 
-The tag **[CU]** before a tool means that it is **C**ommonly **U**sed by multiple UE modding communities, so is highly recommended for personal use.
+> [!WARNING]
+> Some of these tools may be unmaintained and/or outdated, but are still useful for people writing their own tools and may want to see how others implemented their tools.
 
-The tag **[PW]** before a tool means that it is **P**ay**w**alled.
+> [!CAUTION]
+> If you are an UE game developer, and want to know how some of these tools are used to mod your games, please refer to the [developer guide](https://buckminsterfullerene02.github.io/dev-guide/).
 
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
@@ -166,6 +171,8 @@ Tools that generate SDKs and dump the game's code.
     - Supports the generation of SDKs for any game on UE version 1-4
 * [UWP Dumper](https://github.com/Wunkolo/UWPDumper) - Written by **Wunkolo, tunip3 & LukeFZ**
     - A DLL and Injector for dumping UWP applications at run-time to bypass encrypted file system protection
+* [PDBHeaderGenerator](https://github.com/Archengius/PDBHeaderGenerator) - Written by **Archengius**
+    - A tool to generate C++ headers from PDB files
 * [Unreal Finder Tool](https://github.com/CorrM/Unreal-Finder-Tool) - Written by **CorrM**
     - The outdated - but open-source - version of Cheatgear
 
@@ -258,6 +265,7 @@ Map dumping/generating/editing (that aren't already covered by asset editors).
 Tools that can help to automate the modding pipeline (that haven't been covered already).
 * [UnrealAutoMod](https://github.com/Mythical-Github/UnrealAutoMod) - Written by **Mythical**
     - Automatic mod creator and tester tool for `.pak`, `.utoc`, `.ucas`, or loose file mods
+    - Supports UE4.0-5.4
 * [Backup UE Saves](https://gist.github.com/Buckminsterfullerene02/479a281cf3d8a854e91cf804bd7fb8cb) - Written by **Mythical**
     - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
 * [Auto-Disable uasset Files](https://gist.github.com/Buckminsterfullerene02/aebbbc6cde0456a852197260656314c0) - Written by **Spuds**
@@ -279,6 +287,8 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
     - Once you have all static meshes/actors uncooked in-editor, you can use this editor utility script to load them all into a level in a neat way
 * [Batch Import FBX into UEE](https://github.com/KaiserM21/HelperScripts/blob/main/import_fbx.py) - Written by **Zain#1873**
     - Allows you to batch import folders of FBX into the editor since the "import all" function with folder import is broken in many engine versions 
+* [Asset Generator Bitesize](https://github.com/Knutschbert/UnrealStuff/tree/main/Modding/SDK%20Generation/AssetGeneratorBiteSize) - Written by **Knutschbert**
+    - A small gui + symlink script for filtering to use with the AssetGenerator commandlet
 
 ## Reversing
 Reversing tools that aren't necessarily to do with UE, but are commonly used to help with reversing games.
@@ -344,11 +354,21 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - VS-2017 Community installer because microsoft apparently removed it from available downloads lol
 * [Orbital Market](https://orbital-market.com/search)
     - A way to browse Epic marketplace and sort by popularity/reviews and use filters properly
+* [UE Engine Branch Cloner](https://gist.github.com/Buckminsterfullerene02/864d0add56c6a1691549898334f80fe2) - Written by **Mythical**
+    - A small bat file to clone only one branch of unreal engine
+* [BP to UE Version Info](https://gist.github.com/Buckminsterfullerene02/43681e3ee468b3ffa6a433d9332172c9) - Written by **Mythical**
+    - Some useful info on when certain BP features were added to UE
 
 # Guides
-Guides that are useful for modding UE games. There is also a guides forum channel in the [Unreal Engine Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) where you can find more guides/modding tips or share your own.
+Guides that are useful for modding UE games. 
+
+> [!TIP]
+> There is also a guides forum channel in the [Unreal Engine Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934) where you can find more guides/modding tips or share your own.
 
 ## General
+- **[CU]** [UE Modding Guides](https://github.com/Dmgvol/UE_Modding) - Written by **Dmgvol**
+    - A well-written, simple to follow collection of guides for modding UE games
+    - Includes guides on modding textures, models, animations, blueprints, tools, and more
 * **[CU]** [Modding UE5 Games](https://www.abbiedoobie.com/2023/10/13/modding-robocop-rogue-city-and-other-ue-5-games/) - Written by **Abbie Doobie**
     - A guide on how to mod UE5 games
     - Primarily working with IO Store and chunks
@@ -401,7 +421,10 @@ These are loose files/sites.
     - It also features some nice tips for general UE4 use
 
 # UE Modding Discord Servers
-A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. Feel free to nick this list of Discord servers for your own Discord.
+A bunch of links to various UE Modding Discord servers. If you know of any that aren't listed here, please make a PR. Feel free to nick this list of Discord servers for your own Discord.
+
+> [!WARNING]
+> Although I have tried my best to get permanent invite links, I am not responsible for any being invalid. 
 
 ## General
 * [UE Modding](https://discord.gg/unreal-engine-modding-876613187204685934) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
@@ -506,3 +529,4 @@ They are all generated using [UEAssetToolkitGenerator](https://github.com/Longer
 * [Deep Rock Galactic](https://github.com/DRG-Modding/Community-Modkit)
 * [Astro Colony](https://drive.google.com/file/d/1AazbzwbIWUcXGCp8T2k8M9dkCSKmNA3H/view)
 * [cyubeVR](https://drive.google.com/file/d/17hX0e-hQ8MFm3IoW3ljH00EYh2earCoX/view?usp=share_link)
+* [Hydroneer](https://github.com/Buckminsterfullerene02/Hydroneer-Modkit)
