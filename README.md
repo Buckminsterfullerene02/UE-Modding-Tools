@@ -381,6 +381,21 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Some useful info on when certain BP features were added to UE
 * [tuw](https://github.com/matyalatte/tuw) - Written by **matyalatte**
     - Tiny GUI wrapper for command-line tools
+* [3dmigoto](https://github.com/bo3b/3Dmigoto) - Written by **Chiri**, continued by **DarkStarSword** and **bo3b**
+    - Semi-Universal D3D11 (no D3D12/vulkan) wrapper designed for modifying, fixing, or replacing shaders and shader resources, originally used for 3D Stereovision support
+    - Now used by several communities in UE and Unity for runtime mesh replacement in the renderer, avoiding the need to replace actual game assets or bypass signature checks
+    - Not UE specific but many UE games are well suited. Mesh replacement requires GPU skinning which is enabled by default in UE for character animation
+    - Note that effective usage of this extremely powerful tool may require extensive analysis of your game and sufficient skill as a modeler
+    - [Additional notes on 3dmigoto supported games and usage](https://gist.github.com/elbadcode/b09f03fd50a451debc5811782b23bd24) - Written by **lobotomyx**
+* [3D Fixes toolset](https://github.com/DarkStarSword/3d-fixes) - Maintained by **DarkStarSword**
+    - Essential sister repository to 3dmigoto containing scripts for analyzing, extracting, and import shaders and shader resources
+    - Contains Blender import/export script that forms the basis of 3dmigoto mesh modding. Typically requires some analysis work and understanding of D3D11 API
+    - Universal fixes for some built in shaders specific to UE4, as well as some guides on usage to fix rendering issues by swapping shaders
+* **[PW]** [NinjaRipper](https://www.ninjaripper.com/) - Written by **blackninja**
+    - Closed source, paid tool for dumping graphics resources (one time patreon sub for permanent license without updates) 
+    - Uses similar techniques as 3Dmigoto but trades the ability to replace resources for greater API support, with coverage for vulkan and D3D12
+    - As of version 2.6 now dumps decompiled shaders and API call analysis log making it a viable alternative to graphics debuggers like renderdoc in some cases
+    - Supports importing large scenes, riggable characters, and vertex based animation to Blender, 3DS Max, and Noesis
 
 # Guides
 Guides that are useful for modding UE games. 
@@ -417,7 +432,8 @@ Many popular modding communities for various games have their own websites for d
 * [Satisfactory](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
     - The Satisfactory Modding Documentation is much more useful than official UE documentation in some places, like in the C++ and Blueprint section
 * [Spyro Reignited](https://franklygd.github.io/Spyro-Reignited-Trilogy-Asset-Replacement/)
-
+* [Snowbreak Containment Zone](https://rentry.org/SnowbreakModdingTutorial)
+  
 ## Game Specific BUT Transferrable
 These are loose files/sites.
 
@@ -515,7 +531,8 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Absolver Academy](https://discord.gg/jUe34UTh)
 * [Abiotic Factor Modding](https://discord.gg/Tz2YHA79rX)
 * [Epic Mickey: Rebrushed Modding](https://discord.gg/j85J4BmZbn)
-
+* [OpenFF7R](https://discord.gg/VYGQDmzhXr)
+  
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
 
