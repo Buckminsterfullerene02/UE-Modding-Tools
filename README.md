@@ -432,7 +432,8 @@ Many popular modding communities for various games have their own websites for d
 * [Satisfactory](https://docs.ficsit.app/satisfactory-modding/latest/index.html)
     - The Satisfactory Modding Documentation is much more useful than official UE documentation in some places, like in the C++ and Blueprint section
 * [Spyro Reignited](https://franklygd.github.io/Spyro-Reignited-Trilogy-Asset-Replacement/)
-
+* [Snowbreak Containment Zone](https://rentry.org/SnowbreakModdingTutorial)
+  
 ## Game Specific BUT Transferrable
 These are loose files/sites.
 
@@ -531,7 +532,6 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Abiotic Factor Modding](https://discord.gg/Tz2YHA79rX)
 * [Epic Mickey: Rebrushed Modding](https://discord.gg/j85J4BmZbn)
 * [OpenFF7R](https://discord.gg/VYGQDmzhXr)
-* [Snowbreak Containment Zone modding guide](https://rentry.org/SnowbreakModdingTutorial) (discord server is currently closed)
   
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
