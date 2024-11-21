@@ -391,7 +391,7 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Essential sister repository to 3dmigoto containing scripts for analyzing, extracting, and import shaders and shader resources
     - Contains Blender import/export script that forms the basis of 3dmigoto mesh modding. Typically requires some analysis work and understanding of D3D11 API
     - Universal fixes for some built in shaders specific to UE4, as well as some guides on usage to fix rendering issues by swapping shaders
-**[PW]**[NinjaRipper](https://www.ninjaripper.com/) - Written by **blackninja**
+* **[PW]**[NinjaRipper](https://www.ninjaripper.com/) - Written by **blackninja**
     - Closed source, paid tool for dumping graphics resources (one time patreon sub for permanent license without updates) 
     - Uses similar techniques as 3Dmigoto but trades the ability to replace resources for greater API support, with coverage for vulkan and D3D12
     - As of version 2.6 now dumps decompiled shaders and API call analysis log making it a viable alternative to graphics debuggers like renderdoc in some cases
