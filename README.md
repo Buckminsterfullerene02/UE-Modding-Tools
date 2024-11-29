@@ -22,19 +22,16 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Allows for fast unpaking of many types of files including `.pak` files (but does not work for `IoStore` container files (`.ucas`/`.utoc`))
     - [Download link](https://aluigi.altervista.org/bms/unreal_tournament_4.bms) for the UE `.bms` script
 * **[CU]** [repak](https://github.com/trumank/repak) - Written by **truman**
-    - A fork of the below unpak tool, with a few extra features
     - Supports reading all pak versions with compression/encryption and writing all pak versions
     - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
-* **[CU]** [ZenTools](https://github.com/Archengius/ZenTools/) - Written by **Archengius**
+* **[CU]** [ZenTools](https://github.com/LongerWarrior/ZenTools) - Written by **Archengius** & maintained by **LongerWarrior**
     - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
     - The extracted files can then be opened with any asset editor and repacked back into the `IoStore` container using UnrealPak
-    - Only supports 5.1 and 5.2
+    - Only supports UE5+
+    - Use the below `IOStorePackager` tool to repack the cooked assets back into the `IoStore` container files 
 * **[CU]** [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
     - A fork of the above ZenTools but only supports 4.25 - 4.27 (all UE4 IoStore versions)
     - A method to repack assets into IoStore container files using UnrealPak can be found [here](https://gist.github.com/Buckminsterfullerene02/0f7233d5dda97c82039ba932c2bc8fb7)
-* **[CU]** [ZenTools UE5 Fixed](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/blob/main/Loose%20Files/ZenToolsFixed-Temp.zip) - Written by **LongerWarrior**
-    - A temporary fix for the above Zentools for UE5, and specifically adding support for 5.3 and 5.4 games
-    - This will be updated with a repository link when the code is added into one
 * [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Written by **NoobInCoding**
     - UnrealReZen is for packing `IoStore` container files (`.utoc` and `.ucas`)
     - Only works with the FModel output format of these files, which are not the same as normal cooked assets (e.g. ZenTools or UnrealPak output) 
@@ -43,6 +40,7 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Made with [tuw](https://github.com/matyalatte/tuw)
 * [unpak](https://github.com/bananaturtlesandwich/unpak) - Written by **Spuds**
     - A "no nonsense" unreal pak parser that doesn't force files to be extracted, only converts entries to bytes when requested and supports all pak versions
+    - Deprecated in favour of repak
 * [repak wrappers](https://github.com/Mythical-Github/repak_wrappers) - Put together by **Mythical**
     - Windows wrapper scripts for repak
     - Easier for newer modders to use than repak's CLI requirement
@@ -228,7 +226,7 @@ Tools that can load mods into the game.
     - Support for mods created previously with UML
 * [Unreal Engine Mod Loader](https://github.com/RussellJerome/UnrealModLoader) - Written by **RussellJerome**
     - A tool used to load Blueprint and basic SDK based C++ Mods for Unreal Engine 4 games
-    - Mostly depreciated now with the release of UE4SS' Mod Loader
+    - Mostly deprecated now with the release of UE4SS' Mod Loader
 * [Reality](https://github.com/itskaitlyn03/Reality) - Written by **itskaitlyn03**
     - A highly abstract and modular Unreal Engine mod loader for the 21st century, written in C#
 * [DLL Plugin Loader](https://github.com/c0dycode/DLLPluginLoader) - Written by **c0dycode**
@@ -281,12 +279,15 @@ Map dumping/generating/editing (that aren't already covered by asset editors).
 * [BlenderUMap2](https://github.com/MinshuG/BlenderUmap2) - Written by **Amrsatrio & MinshuG**
     - Imports `.umaps` into Blender from UE4/5 games
     - Can also read `.replay` files from Fortnite and export actors from them
+* [LandscapeExporter](https://github.com/Knutschbert/CUE4Parse) - Written by **Knutschbert**
+    - Exports heightmap and weightmap tiles as png from all `.umaps` containing Landscape data
+    - Tested with UE 4.25 and 4.27 games. Does not support IoStore
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
 * [UnrealAutoMod](https://github.com/Mythical-Github/UnrealAutoMod) - Written by **Mythical**
     - Automatic mod creator and tester tool for `.pak`, `.utoc`, `.ucas`, or loose file mods
-    - Supports UE4.0-5.4
+    - Supports UE4.0+
 * [UnrealAutoModInEditor](https://github.com/Mythical-Github/UnrealAutoModInEditor) - Written by **Mythical**
     - In-editor version of the above UnrealAutoMod tool
     - Supports UE4.22+
