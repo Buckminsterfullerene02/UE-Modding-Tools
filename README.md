@@ -518,7 +518,7 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Combined speedrunning and modding for Ghostrunner](https://discord.gg/eZRz3Q5)
 * [Official Blue Fire server with modding channels](https://discord.gg/q4ydWSG)
 * [Code Vein & Scarlet Nexus Modding](https://discord.gg/VvfvWn9)
-* [Orcs Must Die Modding Community](https://discord.gg/YrCaHw7Hza) (covers Unchained (UE3) Singleplayer client and OMD3 (UE4.26))
+* [Orcs Must Die Modding Community](https://discord.gg/YrCaHw7Hza) (covers Unchained (UE3) (Project Rechained), OMD3 (UE4.26) and OMD Deathtrap (UE5.3.2))
 * [Tales of Arise Mods](https://discord.gg/Se2XTnA)
 * [BravelyPath Modular](https://discord.gg/t43Kbrp)
 * [Trials of Mana Modding](https://discord.gg/MgDh4QW)
