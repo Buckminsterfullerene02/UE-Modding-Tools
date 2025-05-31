@@ -16,32 +16,33 @@ Any tool that is not listed here, but should be, please submit a pull request.
 
 ## Packers & Unpackers
 Tools that deal with packing and unpacking the UE4 archive files.
+* **[CU]** [repak](https://github.com/trumank/repak) - Written by **truman**
+    - Supports reading all pak versions with compression/encryption and writing all pak versions
+    - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
+    - Does not work for `IoStore` container files (`.ucas`/`.utoc`)
+* **[CU]** [retoc](https://github.com/trumank/retoc) - Written by **truman & Archengius**
+    - A CLI tool for packing/unpacking `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
+    - Supports converting between Zen assets (such as those extracted by `FModel`) and legacy assets (`.uasset`/`.uexp`)
+    - Assets unpacked by it can be modified using `UAssetGUI` and then repacked by it
+    - Supports all `IoStore` UE versions (but with some limitations for UE4 versions)
 * **[CU]** [UnrealPak](http://fluffyquack.com/tools/unrealpak.rar) - Put together by **FluffyQuack**
     - UnrealPak version from 2016 that is seemingly compatible with any UE4 game
 * **[CU]** [QuickBMS](https://aluigi.altervista.org/quickbms.htm) - Written by **Luigi Auriemma**
     - Allows for fast unpaking of many types of files including `.pak` files
     - Does not work for `IoStore` container files (`.ucas`/`.utoc`)
     - [Download link](https://aluigi.altervista.org/bms/unreal_tournament_4.bms) for the UE `.bms` script
-* **[CU]** [repak](https://github.com/trumank/repak) - Written by **truman**
-    - Supports reading all pak versions with compression/encryption and writing all pak versions
-    - Multithreaded unpacking, roughly 2x faster than the built in UnrealPak tool
-* **[CU]** [retoc](https://github.com/trumank/retoc) - Written by **truman & Archengius**
-    - A CLI tool for packing/unpacking `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
-    - Supports converting between Zen assets (such as those extracted by `FModel`) and legacy assets (`.uasset`/`.uexp`)
-    - Assets unpacked by it can be modified using `UAssetGUI` and then repacked by it
-    - Supports all `IoStore` UE versions (but with some limitations for UE4 versions)
 * **[CU]** [ZenTools](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/blob/main/Loose%20Files/ZenTools/ZenTools.zip) - Written by **Archengius** & maintained by **LongerWarrior**
     - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
     - The extracted files can then be opened with any asset editor and repacked back into the `IoStore` container using UnrealPak
     - Only supports UE5.1-5.4
-    - [Original repository](https://github.com/LongerWarrior/ZenTools/) (5.3 & 5.4 fix will not seem to be uploaded to it)
-    - Use the below `IOStorePackager` tool to repack the cooked assets back into the `IoStore` container files 
+    - [Original repository](https://github.com/LongerWarrior/ZenTools/) (5.3 & 5.4 fix will not be uploaded to it)
+    - Use `retoc` to repack the cooked assets back into the `IoStore` container files 
 * **[CU]** [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
     - A fork of the above ZenTools but only supports 4.25 - 4.27 (all UE4 IoStore versions)
-    - A method to repack assets into IoStore container files using UnrealPak can be found [here](https://gist.github.com/Buckminsterfullerene02/0f7233d5dda97c82039ba932c2bc8fb7)
+    - A method to repack assets into `IoStore` container files using UnrealPak can be found [here](https://gist.github.com/Buckminsterfullerene02/0f7233d5dda97c82039ba932c2bc8fb7). Alternatively `retoc` can be used with varying results for these versions
 * **[CU]** [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Written by **NoobInCoding**
     - UnrealReZen is for packing `IoStore` container files (`.utoc` and `.ucas`)
-    - Only works with Zen assets format, which is not the same as legacy cooked assets (e.g. ZenTools or UnrealPak output) 
+    - Only works with Zen assets format, which is not the same as legacy cooked assets (e.g. ZenTools or UnrealPak output)
 * [PakMaster](https://github.com/AriesLR/PakMaster) - Written by **AriesLR**
     - A GUI Wrapper for Repak, ZenTools, and UnrealPak 
 * [repak wrappers](https://github.com/Mythical-Github/repak_wrappers) - Put together by **Mythical**
@@ -63,6 +64,8 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Parses and extracts data from UE4 Pak files
 * [U4Pak - Rust](https://github.com/panzi/rust-u4pak) - Written by **panzi**
     - Rust port of U4Pak
+* [IOStorePak](https://github.com/amMattGIT/UE_IOStorePak) - Written by **amMattGIT**
+    - Packager for `IoStore` format 
 
 ## Asset Editors, Parsers & Explorers
 Tools that deal with editing and parsing the UE4 asset files, with formats including `.uasset`, `.uexp`, `.ucas`, `.utoc`, `.umap` etc. 
@@ -76,6 +79,9 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - A GUI for UAssetAPI
 * **[CU]** [UAssetAPI](https://github.com/atenfyr/UAssetAPI) - Written by **atenfyr**
     - A C# API for reading and writing UE4 .uasset files from 4.0 - 4.27+
+* [UAsset Diff Tool](https://github.com/theqoqqi/uasset-diff-tool/) - Written by **Qoqqi**
+    - A command-line tool for comparing `.uasset` files to identify differences between two versions of a game's assets
+    - Aimed at UE4.25-4.27, it supports handy filters and web viewer for easy viewing of data
 * [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
     - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
 * [UAssetEditor](https://github.com/oshock/UAssetEditor) - Written by **oshock**
@@ -85,6 +91,10 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - Displays a limited set of instructions/parameters
 * [BlueprintToCpp](https://github.com/Krowe-moh/BlueprintToCpp) - Written by **Krowe-moh**
     - A tool that converts Unreal Engine Blueprints to C++ to help visualise the blueprint logic
+* [KismetKompiler](https://github.com/tge-was-taken/KismetKompiler) - Written by **tge-was-taken**
+    - Compiler & decompiler for Unreal Engine 4 blueprints
+    - Provides support for decompiling most blueprints into a C#-like syntax 
+    - Offers the ability to compile the decompiled code using a custom script format called `KisMetScript` (`.kms`)
 * [Kismet Analyzer](https://github.com/trumank/kismet-analyzer) - Written by **trumank**
     - Tools for analyzing and manipulating kismet bytecode in cooked Unreal Engine assets
 * [Kismet Decompiler](https://github.com/Yangff/kismet-analyzer) - Written by **Yangff**
@@ -101,14 +111,6 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
 * [Kismet Editor](https://github.com/SolicenTEAM/KismetEditor/) - Written by **SolicenTEAM**
     - Kismet strings extractor and replacer
     - Uses the UAssetAPI library as a base
-* [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121 & FCH823**
-    - Allows you to install texture packs created with UPK Explorer for UE3
-    - [TFC Installer](https://www.nexusmods.com/site/mods/588?)
-    - There is a dedicated category for discussion of this tool with the author in the [UE Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934)
-* [Unreal Library](https://github.com/EliotVU/Unreal-Library) - Written by **EliotVU**
-    - An UnrealScript decompiler API to parse Unreal package files (`.upk`, `.udk`, `.u`, `.uasset`; etc), with support for Unreal Engine 1, 2, and 3
-* [UE Explorer](https://github.com/UE-Explorer/UE-Explorer) - Written by **EliotVU**
-    - This is the GUI version of the above UELib
 * [JohnWickParse](https://github.com/SirWaddles/JohnWickParse) - Written by **SirWaddles, FabianFG, WorkingRobot & Amrsatrio**
     - A parser for uasset, uexp and pak files
 * [UAsset JSON Serializer](https://github.com/ithinkandicode/bloodstained-tools/tree/master/Serializer) - Written by **Kein**
@@ -117,6 +119,17 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
     - CLI program with a lot of flexibility for editing uasset files
 * [UAssetConverter](https://github.com/approved/UnrealUAssetConverter) - Written by **approved**
     - An API to read, create, and modify .uasset and .uexp files
+* [UE.Toolkit](https://github.com/RyoTune/UE.Toolkit) - Written by **RyoTune**
+    - General Reloaded toolkit mod for UE games by editing of primitive data in memory using XML files
+    - No Unreal Editor, file unpacking/repacking/cooking, or hex editing, and edits are inherently merged down to the property
+* [pyUE4Parse](https://github.com/MinshuG/pyUE4Parse) - Written by **MinshuG**
+    - A Python library for parsing UE4/5 assets and supports reading `IoStore` containers
+    - Convert textures to PIL images and assets to JSON
+* [uasset-rs](https://github.com/jorgenpt/uasset-rs) - Written by **jorgenpt**
+    - Parsing of Unreal Engine asset files in Rust 
+* [Uasset Reader JS](https://github.com/blueprintue/uasset-reader-js) - Written by **rancoud**
+    - Read and extract information of `.uasset` files from Unreal Engine in javascript
+    - [Website](https://blueprintue.com/tools-uasset-reader/)
 
 ## Textures, Animations & Modelling
 Tools that deal with editing the textures, animations and models from UE4 games. 
@@ -192,6 +205,8 @@ Tools that generate SDKs and dump the game's code.
     - Modify to set the correct folder, and could be modified to apply to other types of classes as well if needed
 * [Unreal Mappings Dumper](https://github.com/OutTheShade/UnrealMappingsDumper) - Written by **OutTheShade**
     - A dumper that generates mappings (.usmap) files for datamining Unreal Engine 5 games
+* [Unreal Mappings Archive](https://github.com/TheNaeem/Unreal-Mappings-Archive)
+    - A collection of mappings files for various Unreal Engine games
 * [Unreal Dumper](https://github.com/guttir14/UnrealDumper-4.25) - Written by **guttir14**
     - Generates the C++ headers for your game
 * [UE SDK Generator](https://github.com/polivilas/UnrealEngineSDKGenerator) - Written by **polivilas**
@@ -226,12 +241,19 @@ Tools that generate assets for the Unreal Engine Editor. Allows you to reconstru
 Tools that deal with editing the UE4 .locres files, which are used for localisation.
 * **[CU]** [UnrealLocres](https://github.com/akintos/UnrealLocres) - Written by **akintos**
     - UnrealLocres can read/write every locres version
+* [UnrealLocres Editor](https://github.com/Snoozeds/UnrealLocresEditor) - Written by **Snoozeds**
+    - A GUI for the UnrealLocres tool above
+    - Allows you to edit the `.locres` files in a more user-friendly way
 * [Locres Editor](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/blob/main/Loose%20Files/unreal_locres_texttool.exe) - (Unknown author)
     - A tool to change the game's `.locres` files that are used for localization
 * [UE4LocalizationsTool](https://github.com/amrshaheen61/UE4LocalizationsTool) - Written by **amr shaheen**
     - Simple tool to edit unreal engine 4 text files
 * [UEExtractor](https://github.com/SolicenTEAM/UEExtractor) - Written by **SolicenTEAM**
     - Extracts `.locres` from Unreal Engine unpacked: `.pak` or (`.utoc`|`.ucas`) to localize the game
+* [UE4TextExtractor](https://github.com/VD42/UE4TextExtractor) - Written by **VD42**
+    - Extract localizable text from `.uasset`, `.uexp` and `.umap` files 
+* [LocRes Builder](https://github.com/matyalatte/LocRes-Builder) - Written by **matyalatte**
+    - Building tool for localization resources of UE4 games without requiring the original game files
 
 ## Loaders
 Tools that can load mods into the game.
@@ -382,10 +404,15 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - A .NET library for reading and writing Unreal Engine 4 save files
 * [bitfix](https://github.com/trumank/bitfix) - Written by **truman**
     - Simple Lua-scriptable runtime binary patcher 
+    - Games with AES encryption and sigs can be patched with this tool and [this file](https://gist.github.com/Buckminsterfullerene02/90077ce81c0fd908144498869f4ea288)
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
 * [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
     - A plugin for UE4.23 which allows for programming in C#
+* [Usmap.NET](https://github.com/NotOfficer/Usmap.NET) - Written by **NotOfficer**
+    - A `.NET` parser for `.usmap` files 
+* [Oodle.NET](https://github.com/NotOfficer/Oodle.NET) - Written by **NotOfficer**
+    - A `.NET` wrapper for the Oodle compression library
 * [Universal-ImGui-D3D11-Hook-WithResize](https://github.com/GHFear/Universal-ImGui-D3D11-Hook-WithResize) - Written by **GHFear**
     - A Universal DirectX11 hook that supports resizing of the game window by hooking the ResizeBuffers
 * [Asset Registry Helper](https://github.com/Buckminsterfullerene02/UE4-Modding-Tools/tree/main/Loose%20Files/Asset%20Registry%20Helper) - Written by **Archengius**
@@ -416,6 +443,23 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Uses similar techniques as 3Dmigoto but trades the ability to replace resources for greater API support, with coverage for vulkan and D3D12
     - As of version 2.6 now dumps decompiled shaders and API call analysis log making it a viable alternative to graphics debuggers like renderdoc in some cases
     - Supports importing large scenes, riggable characters, and vertex based animation to Blender, 3DS Max, and Noesis
+
+## Unreal Engine 1, 2 & 3
+Earlier UE versions did not have freely available source and mostly used `.upk`, `.u` and `.udk` files for assets. 
+* [Unreal Library](https://github.com/EliotVU/Unreal-Library) - Written by **EliotVU**
+    - A library for reading Unreal Engine 1, 2 & 3 files
+    - Also contains a large table of games and their exact engine/package versions
+* [UE Explorer](https://github.com/UE-Explorer/UE-Explorer) - Written by **EliotVU**
+    - UE Explorer is an easy-to-use browser and decompiler for Unreal Engine 1, 2 & 3 packages
+* [Unreal Script Language Service](https://github.com/EliotVU/UnrealScript-Language-Service) - Written by **EliotVU**
+    - A VS Code language service for UnrealScript, the scripting language used in Unreal Engine 2 & 3
+    - Provides syntax highlighting, code completion, and other features for UnrealScript development
+* [UPK Explorer for UE3](https://www.nexusmods.com/site/mods/587/) - Written by **Wastelander121 & FCH823**
+    - Allows you to install texture packs created with UPK Explorer for UE3
+    - [TFC Installer](https://www.nexusmods.com/site/mods/588?)
+    - There is a dedicated category for discussion of this tool with the author in the [UE Modding Discord](https://discord.gg/unreal-engine-modding-876613187204685934)
+* [UPKUtils](https://github.com/wghost/UPKUtils) - Written by **wghost**
+    - A set of utilities to work with UE3 cooked packages
 
 # Guides
 Guides that are useful for modding UE games. 
@@ -555,6 +599,9 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [Frostpunk Modding Hub](https://discord.gg/ZWBhCYAyQN)
 * [Lies of P Modding](https://discord.gg/PndjUd3xJa)
 * [Batman Arkham Workshop](https://discord.gg/arkhamworkshop)
+* [RuneScape: Dragonwilds Modding](https://discord.gg/ByfGPnGUkq)
+* [Bellwright Modding](https://discord.gg/DyxeFVvT3D)
+* [Killing Floor Series Modding](https://discord.gg/WtAeXRbF3K) (kf1, kf2, kf3, kfmod, kfi, kfc)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
