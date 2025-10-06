@@ -31,18 +31,18 @@ Tools that deal with packing and unpacking the UE4 archive files.
     - Allows for fast unpaking of many types of files including `.pak` files
     - Does not work for `IoStore` container files (`.ucas`/`.utoc`)
     - [Download link](https://aluigi.altervista.org/bms/unreal_tournament_4.bms) for the UE `.bms` script
-* **[CU]** [ZenTools](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/blob/main/Loose%20Files/ZenTools/ZenTools.zip) - Written by **Archengius** & maintained by **LongerWarrior**
+* **[CU]** [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Written by **NoobInCoding**
+    - UnrealReZen is for packing `IoStore` container files (`.utoc` and `.ucas`)
+    - Only works with Zen assets format, which is not the same as legacy cooked assets (e.g. ZenTools or UnrealPak output)
+* [ZenTools](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/blob/main/Loose%20Files/ZenTools/ZenTools.zip) - Written by **Archengius** & maintained by **LongerWarrior**
     - Extracts cooked packages (`.uasset`/`.uexp`) from the `IoStore` container files (`.ucas`/`.utoc` + `.pak`)
     - The extracted files can then be opened with any asset editor and repacked back into the `IoStore` container using UnrealPak
     - Only supports UE5.1-5.4
     - [Original repository](https://github.com/LongerWarrior/ZenTools/) (5.3 & 5.4 fix will not be uploaded to it)
     - Use `retoc` to repack the cooked assets back into the `IoStore` container files 
-* **[CU]** [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
+* [ZenTools UE4](https://github.com/WistfulHopes/ZenTools-UE4) - Written by **WistfulHopes**
     - A fork of the above ZenTools but only supports 4.25 - 4.27 (all UE4 IoStore versions)
     - A method to repack assets into `IoStore` container files using UnrealPak can be found [here](https://gist.github.com/Buckminsterfullerene02/0f7233d5dda97c82039ba932c2bc8fb7). Alternatively `retoc` can be used with varying results for these versions
-* **[CU]** [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Written by **NoobInCoding**
-    - UnrealReZen is for packing `IoStore` container files (`.utoc` and `.ucas`)
-    - Only works with Zen assets format, which is not the same as legacy cooked assets (e.g. ZenTools or UnrealPak output)
 * [PakMaster](https://github.com/AriesLR/PakMaster) - Written by **AriesLR**
     - A GUI Wrapper for Repak, ZenTools, and UnrealPak 
 * [repak wrappers](https://github.com/Mythical-Github/repak_wrappers) - Put together by **Mythical**
@@ -82,6 +82,9 @@ Tools that deal with editing and parsing the UE4 asset files, with formats inclu
 * [UAsset Diff Tool](https://github.com/theqoqqi/uasset-diff-tool/) - Written by **Qoqqi**
     - A command-line tool for comparing `.uasset` files to identify differences between two versions of a game's assets
     - Aimed at UE4.25-4.27, it supports handy filters and web viewer for easy viewing of data
+* [usmap2json](https://hypermodule.github.io/usmap2json/) - Written by **hypermodule**
+    - A web-based tool that converts `.usmap` files to JSON format for easier inspection and analysis
+    - Source is available [here](https://github.com/hypermodule/usmap2json)
 * [Asset Editor](https://github.com/kaiheilos/Utilities) - Written by **kaiheilos**
     - UE Uasset Viewer/Editor can unpack and read/edit assets from engine versions 4.11 - 4.26
 * [UAssetEditor](https://github.com/oshock/UAssetEditor) - Written by **oshock**
@@ -190,6 +193,9 @@ Tools that generate SDKs and dump the game's code.
     - Full instructions on how to use it can be found [here](https://docs.ue4ss.com/guides/generating-uht-compatible-headers.html)
 * **[CU]** [Dumper-7](https://github.com/Encryqed/Dumper-7) - Written by **Fischsalat & Encryqed**
     - SDK Generator for all Unreal Engine games. Supported versions are all of UE4 and UE5
+* [jmap dumper](https://github.com/trumank/jmap) - Written by **trumank**
+    - A dumper that can generate `.usmap` files using just a minidump or a running process of a game
+    - Can also generate `.jmap` files that can be used with [Suzie](https://github.com/trumank/Suzie)
 * [UE4 Project Generator GUI](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/blob/main/Loose%20Files/UE4%20Project%20Generator%20GUI.exe) - Written by **spuds**
     - Provides a GUI for the UE4 Game Project Generator tool above
     - Organises the CMD arguments for you in a GUI and generates reuseable batch files
@@ -236,6 +242,8 @@ Tools that generate assets for the Unreal Engine Editor. Allows you to reconstru
     - Bulk converts cooked assets into UEAssetToolkit-compatible JSON
     - Confirmed to support UE4.25-4.27
     - Also known as Cooked Asset Serializer (CAS)
+* [Suzie](https://github.com/trumank/Suzie) - Written by **trumank & Archengius**
+    - An Unreal Engine Editor plugin that generates UHT and content from [jmap](https://github.com/trumank/jmap) file at runtime
 
 ## .locres Editors
 Tools that deal with editing the UE4 .locres files, which are used for localisation.
@@ -287,6 +295,13 @@ Unlocks features that are usually disabled in shipping UE games.
 
 ## Audio
 Tools that deal with audio modding. You don't need any tools to mod the default UE audio system, if the game uses that. Sadly, many games use proprietary audio systems like FMOD and WWise, which require their own tools.
+* **[CU]** [FModel](https://fmodel.app/)
+    - FModel supports playing & extracting Wwise, fmod and Criware audio
+    - Also supports playing & extracting binka and rada audio codecs using the below libraries
+* [BinkadecWithWavHeader](https://github.com/Keisawaakira/BinkadecWithWavHeader) - Written by **Keisawaakira**
+    - A library to allow [FModel](https://github.com/4sval/FModel/discussions/422) to play & extract `binka` files
+* [RadA-Decoder](https://github.com/GhostScissors/RadA-Decoder) - Written by **GhostScissors**
+    - A library to allow [FModel](https://github.com/4sval/FModel/discussions/422) to play & extract `rada` files
 * [BNK Editor](https://github.com/marieismywaifu/BNKEditor) - Written by **marieismywaifu**
     - Allows direct replacing and saving of wems from the .bnk files of games that use Wwise for audio (located in the WwiseBanks folder)
 * [BNK Extractor](https://github.com/eXpl0it3r/bnkextr) - Written by **eXpl0it3r**
@@ -330,6 +345,8 @@ Tools that can help to automate the modding pipeline (that haven't been covered 
 * [UnrealAutoModInEditor](https://github.com/Mythical-Github/UnrealAutoModInEditor) - Written by **Mythical**
     - In-editor version of the above UnrealAutoMod tool
     - Supports UE4.22+
+* [EasyCookEditor](https://github.com/magnv/EasyCookEditor) - Written by **magnv**
+    - Unreal Editor plugin designed to make asset cooking for Unreal Engine 4 easier, primarily for modding purposes, with a focus on cooked asset projects
 * [Backup UE Saves](https://gist.github.com/Buckminsterfullerene02/479a281cf3d8a854e91cf804bd7fb8cb) - Written by **Mythical**
     - Just edit the Game project name to your particular game and it will backup the `.sav` and `.ini` files for that game or just toss it in one of your existing bat files
 * [Auto-Disable uasset Files](https://gist.github.com/Buckminsterfullerene02/aebbbc6cde0456a852197260656314c0) - Written by **Spuds**
@@ -359,6 +376,10 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 * [patternsleuth](https://github.com/trumank/patternsleuth) - Written by **trumank**
     - A tool for finding AoBs/patterns against a collection of Unreal Engine games
     - Can show a summary of all patterns against all games or disassemble each step of a pattern resolution chain to debug failed patterns
+* [binfold](https://github.com/trumank/binfold) - Written by **trumank**
+    - A utility for quickly and accurately porting huge numbers of symbols between similar binaries
+    - Can generate PDBs from a binary using an existing database of Unreal Engine symbols (generated by games that ship with PDBs)
+    - Can create a database from executables with PDBs
 * [AOB Generator](https://github.com/FransBouma/InjectableGenericCameraSystem/tree/master/Tools/AOBGen) - Written by **Frans 'Otis_Inf' Bouma**
     - A small tool for easy AOB creating from copied x64 disassembly (Cheat Engine or x64dbg format)
 * [Cheat Engine](https://www.cheatengine.org/) - Written by **Dark Byte**
@@ -391,6 +412,8 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
     - A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.
 * [Binary Ninja](https://binary.ninja/) - Written by **Vector 35**
     - A reverse engineering platform that enables you to analyze and reverse engineer binary code
+* [ue_binja](https://github.com/trumank/jmap) - Written by **trumank**
+    - A Binary Ninja plugin that reconstruct classes and structs from UE reflection data (requires Binary Ninja licence)
 
 ## Other
 Other tools that aren't necessarily to do with UE, but are commonly used to help with modding games.
@@ -398,6 +421,8 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
     - Universal VR Mod for Unreal Engine 4/5
 * **[CU]** [uesave](https://github.com/trumank/uesave-rs) - Written by **truman**
     - A save file editor/library for reading and writing Unreal Engine save files (commonly referred to as GVAS)
+* [UETools-GUI](https://github.com/Cranch-fur/UETools-GUI) - Written by **Cranch**
+    - Solution for in-game debugging of Unreal Engine games
 * [gvas](https://github.com/localcc/gvas) - Written by **scottanderson & localcc**
     - Rust library that allows parsing of gvas save files
 * [UeSaveGame](https://github.com/CrystalFerrai/UeSaveGame) - Written by **CrystalFerrai**
@@ -405,6 +430,8 @@ Other tools that aren't necessarily to do with UE, but are commonly used to help
 * [bitfix](https://github.com/trumank/bitfix) - Written by **truman**
     - Simple Lua-scriptable runtime binary patcher 
     - Games with AES encryption and sigs can be patched with this tool and [this file](https://gist.github.com/Buckminsterfullerene02/90077ce81c0fd908144498869f4ea288)
+* [Unreal Engine Signature Bypasser](https://github.com/rm-NoobInCoding/UniversalSigBypasser) - Written by **NoobInCoding**
+    - A universal signature bypasser for Unreal Engine games
 * [UE4 Engine Version Grabber](https://github.com/RussellJerome/Unreal-Engine-4-Engine-Version-Grabber) - Written by **RussellJerome**
     - A simple tool that will grab the engine version of a UE4 game
 * [USharp](https://github.com/pixeltris/USharp) - Written by **pixeltris**
@@ -476,6 +503,9 @@ Guides that are useful for modding UE games.
     - Primarily working with IO Store and chunks
     - Lots of pictures, so it should be easy to follow along
     - [Backup Link (with PDF version)](https://www.nexusmods.com/robocoproguecity/mods/3)
+* [Unreal Modding Guides](https://tempo-organization.github.io/Unreal-Modding-Guides/) - Written by **Mythical**
+    - This site is a collection of useful guides for Unreal Engine modding
+    - Examples for working with Blueprints, engine functions, materials, and more
 * [UE4 Modding Guide](https://bananaturtlesandwich.github.io/UE4-Modding-Guide/) - Written by **Spuds**
     - A general guide for Unreal Engine 4 game modding
 * [Setting up UE as git merge tool for BPs](https://gist.github.com/Panakotta00/c90d1017b89b4853e8b97d13501b2e62) - Written by **Panakotta00**
@@ -533,6 +563,7 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [UE Modding](https://discord.gg/unreal-engine-modding-876613187204685934) - A Discord server for modders from any game to pool knowledge & tools that they think could be useful for other UE games. It is a great place to ask questions and get help with modding.
 * [Unreal Source](https://discord.gg/unrealsource) - The official Unreal Engine forum server.
 * [Flatscreen to VR Game Modding](https://discord.gg/ZFSCSDe) - The server that is dedicated to modding games from flatscreen to VR.
+* [UDK Veterans](https://discord.com/invite/HApcffArSa) - The refuge server for preserving Unreal Engine 3 history.
 
 ## Game Specific
 * [Astroneer Modding](https://discord.gg/bBqdVYxu4k)
@@ -602,11 +633,18 @@ A bunch of links to various UE Modding Discord servers. If you know of any that 
 * [RuneScape: Dragonwilds Modding](https://discord.gg/ByfGPnGUkq)
 * [Bellwright Modding](https://discord.gg/DyxeFVvT3D)
 * [Killing Floor Series Modding](https://discord.gg/WtAeXRbF3K) (kf1, kf2, kf3, kfmod, kfi, kfc)
+* [Borderlands Series Modding](https://discord.gg/bXeqV8Ef9R)
+* [Tokyo Xtreme Racer Modding](https://discord.gg/7mMmpb43km)
+* [Hello Neighbour Modding](https://discord.gg/krSZXxm6eR)
+* [VEIN Unofficial Modding](https://discord.gg/nsaPf7wAkP)
+* [Whiskerwood Modding](https://discord.gg/DnwmcvSQZz)
 
 # Game Specific Template Projects
 These are "mirrored" C++ UE projects for various games. They are meant to be used as a base for blueprint modding, and are usually updated to the latest version of the game. They completely eliminate the need to manually dummy any C++ headers.
 
-They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and the [Game Project Generator](https://github.com/Buckminsterfullerene02/UE4GameProjectGenerator).
+Most are generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and the [Game Project Generator](https://github.com/Buckminsterfullerene02/UE4GameProjectGenerator).
+
+More recently, some projects are using [Suzie](https://github.com/trumank/Suzie).
 
 * [Deep Rock Galactic](https://github.com/DRG-Modding/FSD-Template)
 * [Hogwarts Legacy](https://github.com/narknon/PhoenixUProj)
@@ -638,3 +676,6 @@ They are all generated using [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) and t
 * [FF7R2](https://github.com/narknon/FF7R2UProj)
 * [The Walking Dead: Saints & Sinners](https://github.com/substatica/TWD-CH1-SDK)
 * [The Walking Dead: Saints & Sinners 2](https://github.com/substatica/TWD-CH2-SDK)
+* [Oblivion Remastered](https://github.com/Kein/Altar)
+* [RuneScape: Dragon Wilds](https://github.com/Kein/RSDragonwilds)
+* [Whiskerwood](https://github.com/Whiskerwood-Modding/Whiskerwood-Project)
