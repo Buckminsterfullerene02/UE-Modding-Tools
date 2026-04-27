@@ -342,11 +342,11 @@ Map dumping/generating/editing (that aren't already covered by asset editors).
 
 ## Automation
 Tools that can help to automate the modding pipeline (that haven't been covered already).
-* [UnrealAutoMod](https://github.com/Mythical-Github/UnrealAutoMod) - Written by **Mythical**
-    - Automatic mod creator and tester tool for `.pak`, `.utoc`, `.ucas`, or loose file mods
+* [tempo-cli](https://github.com/Tempo-Organization/tempo-cli) - Written by **Mythical**
+    - Unreal Engine modding tool, that covers project management, automated builds, and more
     - Supports UE4.0+
-* [UnrealAutoModInEditor](https://github.com/Mythical-Github/UnrealAutoModInEditor) - Written by **Mythical**
-    - In-editor version of the above UnrealAutoMod tool
+* [TempoInEditor](https://github.com/Tempo-Organization/TempoInEditor) - Written by **Mythical**
+    - In-editor version of the above tempo-cli tool
     - Supports UE4.22+
 * [EasyCookEditor](https://github.com/magnv/EasyCookEditor) - Written by **magnv**
     - Unreal Editor plugin designed to make asset cooking for Unreal Engine 4 easier, primarily for modding purposes, with a focus on cooked asset projects
