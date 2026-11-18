@@ -419,6 +419,7 @@ Reversing tools that aren't necessarily to do with UE, but are commonly used to 
 * [Process Hacker](https://processhacker.sourceforge.io/) - Written by **Wj32**
     - A free and open-source tool that helps you monitor system resources, debug software & looking at memory string for processes currently running
 * [Resource Hacker](http://www.angusj.com/resourcehacker/) - Written by **Angus Johnson**
+* [Resource Cracker](https://www.pelock.com/products/resource-cracker)
     - A freeware utility to view, modify, rename, add, delete and extract resources in 32bit Windows executables and resource files (.res)
 * [010 Editor](https://www.sweetscape.com/010editor/) - Written by **Sweetscape Software**
     - A powerful hex tool for parsing files in 160+ formats and potentially unknown file types
